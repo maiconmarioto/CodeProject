@@ -27,11 +27,8 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        if (\CodeProject\Client::create($request->all()))
-        {
-            return 'Inserido com sucesso!';
-        }
-        return 'Ocorreu um erro durante a inserção';
+        return  array(\CodeProject\Client::create($request->all()))
+       
     }
 
     /**
@@ -54,11 +51,8 @@ class ClientController extends Controller
      */
     public function edit($id, Request $request)
     {
-         if ($produto = \CodeProject\Client::find($id)->update($request->all()))
-         {
-            return 'Alterado com sucesso';
-         }
-         return 'Não foi possivel gravar a alteração';
+        return  array(\CodeProject\Client::find($id)->update($request->all()));
+
     }
 
     /**
@@ -69,10 +63,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        if (\CodeProject\Client::find($id)->delete())
-        {
-            return 'Exclusão com sucesso!';
-        }
-        return 'Um erro ocorreu durante a exclusão!';
+        return  array(\CodeProject\Client::find($id)->delete())
+
     }
 }
