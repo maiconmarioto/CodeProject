@@ -27,7 +27,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        return  array(\CodeProject\Client::create($request->all()))
+        return  array(\CodeProject\Client::create($request->all()));
        
     }
 
@@ -49,11 +49,10 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function edit($id, Request $request)
-    {
-        return  array(\CodeProject\Client::find($id)->update($request->all()));
-
-    }
+   public function update($id, Request $request)
+   {  
+        return array(\CodeProject\Client::find($id)->update($request->all()));
+   }
 
     /**
      * Remove the specified resource from storage.
@@ -63,7 +62,7 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        return  array(\CodeProject\Client::find($id)->delete())
+        return  array(\CodeProject\Client::find($id)->delete());
 
     }
 }
