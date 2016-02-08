@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-
     /**
      * @var ClientRepository
      */
@@ -48,9 +47,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-
         return  $this->service->create($request->all());
-       
     }
 
     /**

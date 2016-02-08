@@ -30,19 +30,14 @@ class ProjectController extends Controller
         $this->service = $service;
     }
 
-    public function index()
-    {
-        return $this->repository->with(['owner','client'])->all();
-    }
-
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function index()
     {
-        //
+        return $this->repository->with(['owner','client'])->all();
     }
 
     /**
@@ -53,7 +48,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->service->create($request->all());
     }
 
     /**
@@ -64,18 +59,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        $this->repository->find($id);
     }
 
     /**
@@ -87,7 +71,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->service->update($request->all(),$id);
     }
 
     /**
@@ -98,6 +82,6 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->repository->delete($id);
     }
 }
