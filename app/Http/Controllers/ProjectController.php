@@ -2,42 +2,47 @@
 
 namespace CodeProject\Http\Controllers;
 
-use CodeProject\Repositories\ClientRepository;
-use CodeProject\Service\ClientService;
+use CodeProject\Repositories\ProjectRepository;
+use CodeProject\Service\ProjectService;
 use Illuminate\Http\Request;
 
 
-class ClientController extends Controller
+class ProjectController extends Controller
 {
-
     /**
-     * @var ClientRepository
+     * @var ProjectRepository
      */
     private $repository;
     /**
-     * @var ClientService
+     * @var ProjectService
      */
     private $service;
 
-    /**
-     * ClientController constructor.
-     * @param ClientRepository $repository
-     * @param ClientService $service
+     /**
+     * ProjectController constructor.
+     * @param ProjectRepository $repository
+     * @param ProjectService $service
      */
-    public function __construct(ClientRepository $repository, ClientService $service)
+    public function __construct(ProjectRepository $repository, ProjectService $service)
     {
+
         $this->repository = $repository;
         $this->service = $service;
     }
 
+    public function index()
+    {
+        return $this->repository->with(['owner','client'])->all();
+    }
+
     /**
-     * Display a listing of the resource.
+     * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function create()
     {
-        return $this->repository->all();
+        //
     }
 
     /**
@@ -48,9 +53,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-
-        return  $this->service->create($request->all());
-       
+        //
     }
 
     /**
@@ -61,20 +64,31 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        return $this->repository->find($id);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-   public function update($id, Request $request)
-   {  
-        return $this->service->update($request->all(), $id);
-   }
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -84,7 +98,6 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        return  $this->repository->delete($id);
-
+        //
     }
 }
