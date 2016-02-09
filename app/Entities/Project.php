@@ -16,4 +16,11 @@ class Project extends Model
         'due_date',
     ];
 
+    public function client() {
+        return $this->hasMany('\CodeProject\Entities\Client', 'id', 'client_id');
+    }
+
+    public function owner() {
+        return $this->hasOne('\CodeProject\Entities\User', 'id', 'owner_id');
+    }
 }
