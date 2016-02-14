@@ -2,6 +2,7 @@
 
 namespace CodeProject\Http\Controllers;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use CodeProject\Repositories\ClientRepository;
 use CodeProject\Service\ClientService;
 use Illuminate\Http\Request;
@@ -36,7 +37,11 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return $this->repository->all();
+        try {
+            return ['success' => $this->repository->all()];
+        } catch (ModelNotFoundException $e) {
+            return response()->json(['success' => 'false', 'message' => 'record not found']);
+        }
     }
 
     /**
@@ -47,7 +52,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        return  $this->service->create($request->all());
+        return  ['success' => $this->service->create($request->all())];
     }
 
     /**
@@ -58,7 +63,11 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        return $this->repository->find($id);
+        try {
+            return ['success' => $this->repository->find($id)];
+        } catch(ModelNotFoundException  $e){
+            return response()->json(['success' => 'false', 'message' => 'record not found']);
+        }
     }
 
     /**
@@ -69,8 +78,12 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
    public function update($id, Request $request)
-   {  
-        return $this->service->update($request->all(), $id);
+   {
+       try {
+           return ['success' => $this->service->update($request->all(), $id)];
+       } catch(ModelNotFoundException  $e) {
+           return response()->json(['success' => 'false', 'message' => 'record not found']);
+       }
    }
 
     /**
@@ -81,7 +94,10 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        return  $this->repository->delete($id);
-
+        try {
+            return ['Success' => $this->repository->delete($id)];
+        } catch (ModelNotFoundException  $e) {
+            return response()->json(['success' => 'false', 'message' => 'record not found']);
+        }
     }
 }

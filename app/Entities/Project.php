@@ -16,6 +16,11 @@ class Project extends Model
         'due_date',
     ];
 
+    public function notes()
+    {
+        return $this->hasMany(ProjectNote::classss);
+    }
+
     public function client() {
         return $this->hasMany('\CodeProject\Entities\Client', 'id', 'client_id');
     }
