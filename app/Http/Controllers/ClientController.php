@@ -38,7 +38,7 @@ class ClientController extends Controller
     public function index()
     {
         try {
-            return ['success' => $this->repository->all()];
+            return [$this->repository->all()];
         } catch (ModelNotFoundException $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
@@ -64,7 +64,7 @@ class ClientController extends Controller
     public function show($id)
     {
         try {
-            return ['success' => $this->repository->find($id)];
+            return [$this->repository->find($id)];
         } catch(ModelNotFoundException  $e){
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
