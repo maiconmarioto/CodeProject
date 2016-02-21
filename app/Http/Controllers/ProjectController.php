@@ -19,7 +19,9 @@ class ProjectController extends Controller
      */
     private $service;
 
-     /**
+
+
+    /**
      * ProjectController constructor.
      * @param ProjectRepository $repository
      * @param ProjectService $service
@@ -49,7 +51,36 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-       return $this->service->create($request->all());
+        return $this->service->create($request->all());
+    }
+
+    public function addMember(Request $request, $projectId)
+    {
+        $project = $this->repository->find($projectId);
+
+        if ( $project->members->find($request->memberId)) {
+            return ['alert' => 'Already a member'];
+        } else {
+            $project->members()->attach($request->memberId);
+            return ['operation' => 'success'];
+        }
+    }
+
+    public function removeMember(Request $request, $projectId)
+    {
+        $project = $this->repository->find($projectId);
+
+        if ( $project->members->find($request->memberId)) {
+            return [$project->members()->detach($request->memberId) => 'Removed'];
+        } else {
+            return ['alert' => 'Not a member'];
+        }
+    }
+
+    public function showMembers($id)
+    {
+        $project = $this->repository->find($id);
+        return  $project->members;
     }
 
     /**
@@ -63,9 +94,6 @@ class ProjectController extends Controller
         if($this->checkProjectPermissions($id)==false){
             return ['error' => 'Access Forbidden'];
         }
-
-
-
         return $this->repository->with(['owner','client'])->find($id);
     }
 
