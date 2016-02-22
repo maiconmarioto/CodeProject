@@ -8,14 +8,15 @@
 
 namespace CodeProject\Service;
 
-
 use CodeProject\Repositories\ProjectMemberRepository;
 use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Validator\ClientValidator;
-use CodeProject\Validator\ProjectValidator;
 use CodeProject\Validator\ProjectMemberValidator;
+use CodeProject\Validator\ProjectValidator;
 use Illuminate\Contracts\Validation\ValidationException;
 use Prettus\Validator\Exceptions\ValidatorException;
+
+use File;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class ProjectService
@@ -28,26 +29,37 @@ class ProjectService
     /**
      * @var ProjectRepository
      */
-    private $projectRepository;
+    private $repository;
     /**
      * @var ProjectValidator
      */
-    private $projectValidator;
+    private $validator;
     /**
      * @var ProjectMemberRepository
      */
-    private $memberRepository;
+    private $repositoryMember;
     /**
      * @var ProjectMemberValidator
      */
-    private $projectMemberValidator;
+    private $memberValidator;
 
-    public function __construct(ProjectRepository $projectRepository, ProjectValidator $projectValidator, ProjectMemberRepository $memberRepository, ProjectMemberValidator $projectMemberValidator)
+    /**
+     * ProjectService constructor.
+     * @param ProjectRepository $repository
+     * @param ProjectValidator $validator
+     * @param ProjectMemberRepository $repositoryMember
+     * @param ProjectMemberValidator $memberValidator
+     */
+    public function __construct(ProjectRepository $repository,
+                                ProjectValidator $validator,
+                                ProjectMemberRepository $repositoryMember,
+                                ProjectMemberValidator $memberValidator)
     {
-        $this->projectRepository = $projectRepository;
-        $this->projectValidator = $projectValidator;
-        $this->memberRepository = $memberRepository;
-        $this->projectMemberValidator = $projectMemberValidator;
+
+        $this->repository = $repository;
+        $this->validator = $validator;
+        $this->repositoryMember = $repositoryMember;
+        $this->memberValidator = $memberValidator;
     }
 
     public function getRepository()
@@ -62,8 +74,8 @@ class ProjectService
     public function create(array $data)
     {
         try {
-            $this->$projectValidator->with($data)->passesOrFail();
-            return $this->projectRepository->create($data);
+            $this->validator->with($data)->passesOrFail();
+            return $this->repository->create($data);
         } catch (ValidatorException $e) {
             return [
                 'error' => true,
@@ -71,8 +83,6 @@ class ProjectService
             ];
         }
     }
-
-
     /**
      * @param array $data
      * @param $id
@@ -81,8 +91,8 @@ class ProjectService
     public function update(array $data, $id)
     {
         try {
-            $this->projectValidator->with($data)->passesOrFail();
-            return $this->projectRepository->update($data, $id);
+            $this->validator->with($data)->passesOrFail();
+            return $this->repository->update($data, $id);
         } catch (ValidatorException $e){
             return [
                 'error' => true,
@@ -91,12 +101,48 @@ class ProjectService
         }
     }
 
-    public function add($projectId,$memberId)
+    public function addMember(array $data)
     {
-        $project = $this->repository->find($projectId);
-        return $project->members()->attach($memberId);
+        try{
+            $this->memberValidator->with($data)->passesOrFail();
+            return $this->repositoryMember->create($data);
+        } catch (ValidatorException $e){
+            return [
+                'error' => true,
+                'message' => $e->getMessageBag()
+            ];
+        }
+    }
+    public function removeMember($projectId, $memberId)
+    {
+        try{
+            $member = $this->repositoryMember->findWhere(['project_id' => $projectId, 'user_id' => $memberId])->first();
+            return $member->delete();
+        }catch (Exception $e){
+            return ['error' => $e->errorInfo];
+        }
+    }
+    public function membersShow($projectId, $memberId)
+    {
+        try{
+            return \CodeProject\Entities\ProjectMembers::all();
+        }catch (Exception $e){
+            return ['error' => $e->errorInfo];
+        }
+    }
+    public function isMember($projectId)
+    {
+        $member = $project = $this->repository->skipPresenter()->find($projectId);
+        return response()->json(['data' => $member->members]);
     }
 
+    public function createFile(array $data)
+    {
+        //name
+        //description
+        //extension
+        Storage::put($data['name'].".".$data['extension'], File::get($data['file']));
+    }
 
 
 }
