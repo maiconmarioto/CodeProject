@@ -5,7 +5,6 @@ namespace CodeProject\Http\Controllers;
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Service\ProjectService;
 use Illuminate\Http\Request;
-use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 
 class ProjectController extends Controller
@@ -99,27 +98,6 @@ class ProjectController extends Controller
         return $this->repository->delete($id);
     }
 
-    public function addMember(Request $request)
-    {
-        $this->service->addMember($request->all());
-    }
-
-    public function removeMember($projectId, $userId)
-    {
-        $this->service->removeMember($projectId, $userId);
-    }
-
-    public function showMembers($id)
-    {
-        $project = $this->repository->find($id);
-        return  $project->members;
-    }
-
-    public function membersShow($id, $idMember)
-    {
-        return \CodeProject\Entities\ProjectMember::where('project_id', $id)->where('member_id', $idMember)->first();
-    }
-
     private function checkProjectOwner($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
@@ -139,5 +117,41 @@ class ProjectController extends Controller
         }
 
         return false;
+    }
+
+
+    public function showMembers($id)
+    {
+        return $this->service->showMembers($id);
+    }
+
+    /**
+     * @param $id
+     * @param $memberId
+     * @return Response
+     */
+    public function addMember($id, $memberId)
+    {
+        return $this->service->addMember($id, $memberId);
+    }
+
+    /**
+     * @param $id
+     * @param $memberId
+     * @return Response
+     */
+    public function removeMember($id, $memberId)
+    {
+        return $this->service->removeMember($id, $memberId);
+    }
+
+    /**
+     * @param $id
+     * @param $memberId
+     * @return Response
+     */
+    public function isMember($id, $memberId)
+    {
+        return $this->service->isMember($id, $memberId);
     }
 }

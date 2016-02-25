@@ -2,9 +2,9 @@
 
 namespace CodeProject\Repositories;
 
-use CodeProject\Entities\ProjectTask;
-use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
+use CodeProject\Entities\ProjectTask;
 
 
 /**

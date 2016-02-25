@@ -3,18 +3,26 @@
 namespace CodeProject\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-class ProjectMember extends Model
+class ProjectMember extends Model implements Transformable
 {
-    protected $fillable = [
-        'project_id',
-        'member_id',
-    ];
+    use TransformableTrait;
 
+    protected $fillable = ['project_id','member_id'];
 
-    public function projects()
+    public function project()
     {
-        return $this->belongsToMany(Project::class,'project_members', 'member_id', 'project_id');
+        return $this->belongsTo(Project::class);
     }
-
+    public function member()
+    {
+        return $this->belongsTo(User::class);
+        //return $this->belongsTo(User::class, 'user_id');
+    }
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
 }

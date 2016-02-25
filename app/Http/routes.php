@@ -24,6 +24,9 @@ Route::group(['middleware' => 'oauth'], function() {
 
 //    Route::group(['middleware' => 'CheckProjectOwner'], function()    {
     Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
+
+  //  Route::resource('project.member', 'ProjectMemberController', ['except' => ['create', 'edit', 'update']]);
+
 //    });
     Route::group(['prefix'=>'project'], function(){
         Route::get('{id}/note', 'ProjectNoteController@index');
@@ -31,20 +34,17 @@ Route::group(['middleware' => 'oauth'], function() {
         Route::get('{id}/note/{noteId}', 'ProjectNoteController@show');
         Route::delete('note/{id}', 'ProjectNoteController@destroy');
 
-
         Route::post('{id}/file','ProjectFileController@store');
-
 
         Route::get('{id}/task', 'ProjectTaskController@index');
         Route::post('{id}/task/', 'ProjectTaskController@store');
         Route::get('{id}/task/{taskId}', 'ProjectTaskController@show');
-        Route::get('{id}/task/{taskId}', 'ProjectTaskController@show');
-        Route::delete('task/{id}', 'ProjectTaskController@destroy');
+        Route::delete('{id}/task/{taskId}', 'ProjectTaskController@destroy');
 
-        Route::get('{id}/members','ProjectController@showMembers');
-        Route::post('{id}/addmember','ProjectController@addMember');
-        Route::get('{id}/member/{memberId}', 'ProjectController@membersShow');
-        Route::delete('{id}/member/{memberId}', 'ProjectController@removeMember');
+        Route::get('{id}/members','ProjectMemberController@index');
+        Route::post('{id}/addmember','ProjectMemberController@store');
+        Route::delete('{id}/member/{memberId}', 'ProjectMemberController@destroy');
+        Route::get('{id}/member/{memberId}', 'ProjectMemberController@show');
     });
 });
 

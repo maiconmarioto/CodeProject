@@ -101,41 +101,6 @@ class ProjectService
         }
     }
 
-    public function addMember(array $data)
-    {
-        try{
-            $this->memberValidator->with($data)->passesOrFail();
-            return $this->repositoryMember->create($data);
-        } catch (ValidatorException $e){
-            return [
-                'error' => true,
-                'message' => $e->getMessageBag()
-            ];
-        }
-    }
-    public function removeMember($projectId, $memberId)
-    {
-        try{
-            $member = $this->repositoryMember->findWhere(['project_id' => $projectId, 'user_id' => $memberId])->first();
-            return $member->delete();
-        }catch (Exception $e){
-            return ['error' => $e->errorInfo];
-        }
-    }
-    public function membersShow($projectId, $memberId)
-    {
-        try{
-            return \CodeProject\Entities\ProjectMembers::all();
-        }catch (Exception $e){
-            return ['error' => $e->errorInfo];
-        }
-    }
-    public function isMember($projectId)
-    {
-        $member = $project = $this->repository->skipPresenter()->find($projectId);
-        return response()->json(['data' => $member->members]);
-    }
-
     public function createFile(array $data)
     {
         //name

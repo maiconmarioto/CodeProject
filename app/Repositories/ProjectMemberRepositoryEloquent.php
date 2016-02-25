@@ -2,14 +2,15 @@
 
 namespace CodeProject\Repositories;
 
-use CodeProject\Entities\ProjectMember;
-use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
+use CodeProject\Entities\ProjectMember;
+
 
 
 /**
- * Class ProjectNoteRepositoryEloquent
- * @package namespace App\Repositories;
+ * Class ProjectMemberRepositoryEloquent
+ * @package namespace CodeProject\Repositories;
  */
 class ProjectMemberRepositoryEloquent extends BaseRepository implements ProjectMemberRepository
 {
@@ -28,6 +29,8 @@ class ProjectMemberRepositoryEloquent extends BaseRepository implements ProjectM
      */
     public function boot()
     {
-//        $this->pushCriteria(app(RequestCriteria::class));
+        $this->pushCriteria(app(RequestCriteria::class));
     }
+
+
 }
