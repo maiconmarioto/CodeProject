@@ -8,15 +8,11 @@
 
 namespace CodeProject\Service;
 
-use CodeProject\Repositories\ProjectMemberRepository;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Validator\ProjectMemberValidator;
 use CodeProject\Validator\ProjectValidator;
-use Illuminate\Contracts\Validation\ValidationException;
+use CodeProject\Repositories\ProjectRepository;
+use Illuminate\Filesystem\Filesystem;
 use Prettus\Validator\Exceptions\ValidatorException;
-
-use File;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Contracts\Filesystem\Factory as Storage;
 
 /**
  * Class ProjectService
@@ -24,7 +20,6 @@ use Illuminate\Support\Facades\Storage;
  */
 class ProjectService
 {
-
 
     /**
      * @var ProjectRepository
@@ -35,31 +30,34 @@ class ProjectService
      */
     private $validator;
     /**
+     * @var Filesystem
+     */
+    private $filesystem;
+    /**
+     * @var Storage
+     */
+    private $storage;
+    /**
      * @var ProjectMemberRepository
      */
-    private $repositoryMember;
-    /**
-     * @var ProjectMemberValidator
-     */
-    private $memberValidator;
 
     /**
      * ProjectService constructor.
      * @param ProjectRepository $repository
      * @param ProjectValidator $validator
-     * @param ProjectMemberRepository $repositoryMember
-     * @param ProjectMemberValidator $memberValidator
+     * @param Filesystem $filesystem
+     * @param Storage $storage
      */
     public function __construct(ProjectRepository $repository,
                                 ProjectValidator $validator,
-                                ProjectMemberRepository $repositoryMember,
-                                ProjectMemberValidator $memberValidator)
+                                FileSystem $filesystem,
+                                Storage $storage
+                                )
     {
-
         $this->repository = $repository;
         $this->validator = $validator;
-        $this->repositoryMember = $repositoryMember;
-        $this->memberValidator = $memberValidator;
+        $this->filesystem = $filesystem;
+        $this->storage = $storage;
     }
 
     public function getRepository()
@@ -103,11 +101,9 @@ class ProjectService
 
     public function createFile(array $data)
     {
-        //name
-        //description
-        //extension
-        Storage::put($data['name'].".".$data['extension'], File::get($data['file']));
+        $project = $this->repository->skipPresenter()->find($data['project_id']);
+        $projectFile = $project->files()->create($data);
+        $this->storage->put($projectFile->getFileName(), $this->filesystem->get($data['file']));
     }
-
 
 }

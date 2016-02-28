@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
 Route::get('/', function(){
     return view('welcome');
 });
@@ -22,30 +12,34 @@ Route::group(['middleware' => 'oauth'], function() {
 
     Route::resource('client', 'ClientController', ['except' => ['create','edit']]);
 
-//    Route::group(['middleware' => 'CheckProjectOwner'], function()    {
     Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
 
-  //  Route::resource('project.member', 'ProjectMemberController', ['except' => ['create', 'edit', 'update']]);
+    Route::group(['prefix' => 'project/{id}'], function(){
+        Route::resource('note', 'ProjectNoteController', ['except' => ['create','edit']]);
+        Route::resource('task', 'ProjectTaskController', ['except' => ['create','edit']]);
+        Route::resource('member', 'ProjectMemberController', ['except' => ['create','edit']]);
 
-//    });
-    Route::group(['prefix'=>'project'], function(){
-        Route::get('{id}/note', 'ProjectNoteController@index');
-        Route::post('{id}/note/', 'ProjectNoteController@store');
-        Route::get('{id}/note/{noteId}', 'ProjectNoteController@show');
-        Route::delete('note/{id}', 'ProjectNoteController@destroy');
+        Route::get('file/{fileId}', 'ProjectFileController@show');
+        Route::post('file', 'ProjectFileController@store');
 
-        Route::post('{id}/file','ProjectFileController@store');
-
-        Route::get('{id}/task', 'ProjectTaskController@index');
-        Route::post('{id}/task/', 'ProjectTaskController@store');
-        Route::get('{id}/task/{taskId}', 'ProjectTaskController@show');
-        Route::delete('{id}/task/{taskId}', 'ProjectTaskController@destroy');
-
-        Route::get('{id}/members','ProjectMemberController@index');
-        Route::post('{id}/addmember','ProjectMemberController@store');
-        Route::delete('{id}/member/{memberId}', 'ProjectMemberController@destroy');
-        Route::get('{id}/member/{memberId}', 'ProjectMemberController@show');
     });
 });
+
+
+//        Route::get('{id}/member','ProjectMemberController@index');
+//        Route::post('{id}/addmember','ProjectMemberController@store');
+//        Route::delete('{id}/member/{memberId}', 'ProjectMemberController@destroy');
+//        Route::get('{id}/member/{memberId}', 'ProjectMemberController@show');
+
+//        Route::get('/note', 'ProjectNoteController@index');
+//        Route::post('/note/', 'ProjectNoteController@store');
+//        Route::get('/note/{noteId}', 'ProjectNoteController@show');
+//        Route::delete('/note/{noteId}', 'ProjectNoteController@destroy');
+
+//        Route::get('{id}/task', 'ProjectTaskController@index');
+//        Route::post('{id}/task/', 'ProjectTaskController@store');
+//        Route::get('{id}/task/{taskId}', 'ProjectTaskController@show');
+//        Route::delete('{id}/task/{taskId}', 'ProjectTaskController@destroy');
+
 
 

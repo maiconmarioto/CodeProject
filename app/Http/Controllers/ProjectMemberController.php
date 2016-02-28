@@ -41,7 +41,7 @@ class ProjectMemberController extends Controller
 
     public function show($id, $idProjectMember)
     {
-        return $this->repository->findWhere(['member_id' => $idProjectMember, 'project_id' => $id]);
+        return $this->repository->find($idProjectMember);
     }
 
     public function destroy($id, $idProjectMember)

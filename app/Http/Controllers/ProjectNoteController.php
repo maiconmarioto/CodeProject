@@ -26,7 +26,6 @@ class ProjectNoteController extends Controller
      */
     public function __construct(ProjectNoteRepository $repository, ProjectNoteService $service)
     {
-
         $this->repository = $repository;
         $this->service = $service;
     }
@@ -83,7 +82,7 @@ class ProjectNoteController extends Controller
         try{
             return ['success' => $this->service->update($request->all(),$noteId)];
         } catch(ModelNotFoundException  $e) {
-            return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
+            return response()->json(['Erro' => true, 'Mensagem' => 'Registro nao localizado']);
         }
     }
 
@@ -98,7 +97,7 @@ class ProjectNoteController extends Controller
         try{
             return ['success' => $this->repository->delete($noteId)];
         } catch(ModelNotFoundException  $e) {
-            return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
+            return response()->json(['Erro' => true, 'Mensagem' => 'Registro nao localizado']);
         }
     }
 }

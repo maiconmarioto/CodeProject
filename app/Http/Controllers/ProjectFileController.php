@@ -2,12 +2,14 @@
 
 namespace CodeProject\Http\Controllers;
 
+
+use CodeProject\Http\Requests;
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Service\ProjectService;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-use File;
-use Illuminate\Support\Facades\Storage;
-use LucaDegasperi\OAuth2Server\Facades\Authorizer;
+use LucaDegasperi\OAuth2Server\Exceptions\NoActiveAccessTokenException;
 
 
 class ProjectFileController extends Controller
@@ -51,15 +53,20 @@ class ProjectFileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $file = $request->file('file');
-        $extension = $file->getClientOriginalExtension();
 
+        if(!$file){
+            return response()->json(['erro' => true, 'mensagem' => 'O Arquivo é obrigatório!']);
+        }
+
+        $extension = $file->getClientOriginalExtension();
         $data['file'] = $file;
         $data['extension'] = $extension;
         $data['name'] = $request->name;
-
+        $data['description'] = $request->description;
+        $data['project_id'] = $request->project_id;
         $this->service->createFile($data);
     }
 
@@ -83,7 +90,10 @@ class ProjectFileController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        if ($this->isNotOwner($id) and $this->isNotMember($id)){
+            return ['error'=>'true','message'=>'Access Forbidden'];
+        }
+        return $this->service->update($request->all(), $id);
     }
 
     /**
@@ -92,8 +102,47 @@ class ProjectFileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id){
+    public function destroy($id)
+    {
+        try
+        {
+            if(!$this->checkProjectOwner($id)){
+                return $this->erroMsgm("O usuário não tem acesso a esse projeto");
+            }
+            $this->repository->find($id)->delete();
+        }
+        catch(QueryException $e){
+            return $this->erroMsgm('Projeto não pode ser apagado pois existe um ou mais clientes vinculados a ele.');
+        }
+        catch(ModelNotFoundException $e){
+            return $this->erroMsgm('Projeto não encontrado.');
+        }
+        catch(NoActiveAccessTokenException $e){
+            return $this->erroMsgm('Usuário não está logado.');
+        }
+        catch(\Exception $e){
+            return $this->erroMsgm('Ocorreu um erro ao excluir o projeto.');
+        }
+    }
 
+
+    private function checkProjectOwner($projectId)
+    {
+        $userId = \Authorizer::getResourceOwnerId();
+        return $this->repository->isOwner($projectId,$userId);
+    }
+    private function checkProjectMember($projectId)
+    {
+        $userId = \Authorizer::getResourceOwnerId();
+        return $this->repository->hasMember($projectId,$userId);
+    }
+
+    private function checkProjectPermissions($projectId)
+    {
+        if($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId)){
+            return true;
+        }
+        return false;
     }
 
 }
