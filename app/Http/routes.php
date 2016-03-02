@@ -1,30 +1,30 @@
 <?php
 
-Route::get('/', function(){
-    return view('welcome');
+Route::get('/', function () {
+	return view('welcome');
 });
 
-Route::post('oauth/access_token', function(){
-    return Response::json(Authorizer::issueAccessToken());
+Route::post('oauth/access_token', function () {
+	return Response::json(Authorizer::issueAccessToken());
 });
 
-Route::group(['middleware' => 'oauth'], function() {
+Route::group(['middleware' => 'oauth'], function () {
 
-    Route::resource('client', 'ClientController', ['except' => ['create','edit']]);
+	Route::resource('client', 'ClientController', ['except' => ['create', 'edit']]);
 
-    Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
+	Route::resource('project', 'ProjectController', ['except' => ['create', 'edit']]);
 
-    Route::group(['prefix' => 'project/{id}'], function(){
-        Route::resource('note', 'ProjectNoteController', ['except' => ['create','edit']]);
-        Route::resource('task', 'ProjectTaskController', ['except' => ['create','edit']]);
-        Route::resource('member', 'ProjectMemberController', ['except' => ['create','edit']]);
+	Route::group(['prefix' => 'project/{id}'], function () {
+		Route::resource('note', 'ProjectNoteController', ['except' => ['create', 'edit']]);
+		Route::resource('task', 'ProjectTaskController', ['except' => ['create', 'edit']]);
+		Route::resource('member', 'ProjectMemberController', ['except' => ['create', 'edit']]);
 
-        Route::get('file/{fileId}', 'ProjectFileController@show');
-        Route::post('file', 'ProjectFileController@store');
+		Route::get('file/{fileId}', 'ProjectFileController@show');
+		Route::post('file', 'ProjectFileController@store');
+		Route::delete('file/{fileId}', 'ProjectFileController@show');
 
-    });
+	});
 });
-
 
 //        Route::get('{id}/member','ProjectMemberController@index');
 //        Route::post('{id}/addmember','ProjectMemberController@store');
@@ -40,6 +40,3 @@ Route::group(['middleware' => 'oauth'], function() {
 //        Route::post('{id}/task/', 'ProjectTaskController@store');
 //        Route::get('{id}/task/{taskId}', 'ProjectTaskController@show');
 //        Route::delete('{id}/task/{taskId}', 'ProjectTaskController@destroy');
-
-
-
