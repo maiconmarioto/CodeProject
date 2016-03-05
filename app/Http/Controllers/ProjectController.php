@@ -49,11 +49,19 @@ class ProjectController extends Controller {
      */
     public function show($id)
     {
-        if ( ! $this->checkProjectPermissions($id))
+        if (!$this->checkProjectPermissions($id))
         {
             return ['error' => 'Access Forbidden'];
         }
-        return $this->repository->find($id);
+
+        $owner = \Authorizer::getResourceOwnerId();
+
+        $project = $this->repository->findWhere(['id' => $id, 'owner_id' => $owner]);
+
+        if (empty($project['data'])){
+            return response()->json(['erro' => true, 'message' => 'Acesso proibido']);
+        }
+        return $project;
     }
     /**
      * @param Request $request
@@ -90,7 +98,7 @@ class ProjectController extends Controller {
         {
             return ['error' => 'Access Forbidden'];
         }
-        return $this->service->delete($id);
+        return $this->repository->delete($id);
     }
     /**
      * @param $id
@@ -125,18 +133,19 @@ class ProjectController extends Controller {
     private function checkProjectOwner($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
-        return $this->repository->isOwner($projectId, $userId);
+        return (bool)$this->repository->isOwner($projectId, $userId);
     }
     private function checkProjectMember($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
-        return $this->repository->isMember($projectId, $userId);
+        return (bool)$this->repository->isMember($projectId, $userId);
     }
-    /**
-     * @param $projectId
-     * @return bool
-     */
-    private function checkProjectPermissions($projectId){
-        return ($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId));
+
+    private function checkProjectPermissions($projectId)
+    {
+        if($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)){
+            return true;
+        }
+        return false;
     }
 }
