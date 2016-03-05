@@ -1,109 +1,62 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maicon
- * Date: 07/02/16
- * Time: 21:02
- */
 
 namespace CodeProject\Service;
 
-use CodeProject\Validator\ProjectValidator;
+use CodeProject\Repositories\ProjectMemberRepository;
 use CodeProject\Repositories\ProjectRepository;
-use Illuminate\Filesystem\Filesystem;
-use Prettus\Validator\Exceptions\ValidatorException;
-use Illuminate\Contracts\Filesystem\Factory as Storage;
+use CodeProject\Validator\ProjectMemberValidator;
+use CodeProject\Validator\ProjectValidator;
 
-/**
- * Class ProjectService
- * @package CodeProject\Services
- */
-class ProjectService
-{
-
+class ProjectService  {
     /**
-     * @var ProjectRepository
+     * @var ProjectMemberValidator
      */
-    private $repository;
-    /**
-     * @var ProjectValidator
-     */
-    private $validator;
-    /**
-     * @var Filesystem
-     */
-    private $filesystem;
-    /**
-     * @var Storage
-     */
-    private $storage;
+    private $memberValidator;
     /**
      * @var ProjectMemberRepository
      */
-
+    private $memberRepository;
     /**
-     * ProjectService constructor.
-     * @param ProjectRepository $repository
-     * @param ProjectValidator $validator
-     * @param Filesystem $filesystem
-     * @param Storage $storage
+     * @param ProjectRepository        $repository
+     * @param ProjectValidator         $validator
+     * @param ProjectMemberRepository $memberRepository
+     * @param ProjectMemberValidator  $memberValidator
      */
-    public function __construct(ProjectRepository $repository,
-                                ProjectValidator $validator,
-                                FileSystem $filesystem,
-                                Storage $storage
-                                )
+    public function __construct(ProjectRepository $repository, ProjectValidator $validator, ProjectMemberRepository $memberRepository, ProjectMemberValidator $memberValidator)
     {
-        $this->repository = $repository;
-        $this->validator = $validator;
-        $this->filesystem = $filesystem;
-        $this->storage = $storage;
+        $this->repository        = $repository;
+        $this->validator         = $validator;
+        $this->Repository        = $memberRepository;
+        $this->memberValidator   = $memberValidator;
     }
-
-    public function getRepository()
+    public function addMember($id, $userId)
     {
-        return $this->repository;
-    }
-
-    /**
-     * @param array $data
-     * @return array|mixed
-     */
-    public function create(array $data)
-    {
-        try {
-            $this->validator->with($data)->passesOrFail();
-            return $this->repository->create($data);
-        } catch (ValidatorException $e) {
+        try
+        {
+            $data = ['project_id' => $id, 'user_id' => $userId];
+            $this->memberValidator->with($data)->passesOrFail();
+            return $this->memberRepository->create($data);
+        }
+        catch (ValidatorException $e)
+        {
             return [
-                'error' => true,
+                'error'   => true,
                 'message' => $e->getMessageBag()
             ];
         }
     }
-    /**
-     * @param array $data
-     * @param $id
-     * @return array|mixed
-     */
-    public function update(array $data, $id)
+    public function removeMember($memberId)
     {
-        try {
-            $this->validator->with($data)->passesOrFail();
-            return $this->repository->update($data, $id);
-        } catch (ValidatorException $e){
+        try
+        {
+            $this->memberRepository->delete($memberId);
+        }
+        catch (ValidatorException $e)
+        {
             return [
-                'error' => true,
+                'error'   => true,
                 'message' => $e->getMessageBag()
             ];
         }
     }
-
-    public function createFile(array $data)
-    {
-        $project = $this->repository->skipPresenter()->find($data['project_id']);
-        $projectFile = $project->files()->create($data);
-        $this->storage->put($projectFile->getFileName(), $this->filesystem->get($data['file']));
-    }
-
 }

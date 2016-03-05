@@ -2,127 +2,141 @@
 
 namespace CodeProject\Http\Controllers;
 
+use CodeProject\Http\Requests;
+use CodeProject\Presenters\ProjectMemberPresenter;
+use CodeProject\Repositories\ProjectMemberRepository;
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Service\ProjectService;
 use Illuminate\Http\Request;
 
-
-class ProjectController extends Controller
-{
+class ProjectController extends Controller {
     /**
      * @var ProjectRepository
      */
-    private $repository;
+    protected $repository;
     /**
      * @var ProjectService
      */
-    private $service;
-
-
+    protected $service;
+    /**
+     * @var ProjectMembersRepository
+     */
+    private $membersRepository;
 
     /**
-     * ProjectController constructor.
      * @param ProjectRepository $repository
      * @param ProjectService $service
+     * @param ProjectMemberRepository $membersRepository
      */
-    public function __construct(ProjectRepository $repository, ProjectService $service)
+    public function __construct(ProjectRepository $repository, ProjectService $service, ProjectMemberRepository $membersRepository)
     {
-
-        $this->repository = $repository;
-        $this->service = $service;
+        $this->repository        = $repository;
+        $this->service           = $service;
+        $this->membersRepository = $membersRepository;
     }
-
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        return $this->repository->with(['owner','client'])->findWhere(['owner_id' => \Authorizer::getResourceOwnerId() ]);
+        return $this->repository->findWhere(['owner_id' => \Authorizer::getResourceOwnerId()]);
     }
-
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return array|mixed
+     */
+    public function show($id)
+    {
+        if ( ! $this->checkProjectPermissions($id))
+        {
+            return ['error' => 'Access Forbidden'];
+        }
+        return $this->repository->find($id);
+    }
+    /**
+     * @param Request $request
+     * @return array
      */
     public function store(Request $request)
     {
         return $this->service->create($request->all());
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        if($this->checkProjectPermissions($id)==false){
-            return ['error' => 'Access Forbidden'];
-        }
-        return $this->repository->with(['owner','client'])->find($id);
-    }
-
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  Request $request
+     * @param  int     $id
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
-        if($this->checkProjectOwner($id)==false){
+        if ( ! $this->checkProjectOwner($id))
+        {
             return ['error' => 'Access Forbidden'];
         }
-
-        return $this->service->update($request->all(),$id);
+        return $this->service->update($request->all(), $id);
     }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return Response
      */
     public function destroy($id)
     {
-        if($this->checkProjectOwner($id)==false){
+        if ( ! $this->checkProjectOwner($id))
+        {
             return ['error' => 'Access Forbidden'];
         }
-
-        return $this->repository->delete($id);
+        return $this->service->delete($id);
     }
-
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function members($id)
+    {
+        return $this->repository->skipPresenter()->find($id)->members;
+    }
+    /**
+     * @param $id
+     * @param $userId
+     * @return array|mixed
+     */
+    public function addMember($id, $userId)
+    {
+        return $this->service->addMember($id, $userId);
+    }
+    /**
+     * @param $id
+     * @param $membersId
+     * @return array
+     */
+    public function removeMember($id, $membersId)
+    {
+        return $this->service->removeMember($membersId);
+    }
+    /**
+     * @param $projectId
+     * @return mixed
+     */
     private function checkProjectOwner($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
         return $this->repository->isOwner($projectId, $userId);
     }
-
     private function checkProjectMember($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
-        return $this->repository->hasMember($projectId, $userId);
+        return $this->repository->isMember($projectId, $userId);
     }
-
-    private function checkProjectPermissions($projectId)
-    {
-        if($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)){
-            return true;
-        }
-
-        return false;
-    }
-
     /**
-     * @param $id
-     * @param $memberId
-     * @return Response
+     * @param $projectId
+     * @return bool
      */
-
+    private function checkProjectPermissions($projectId){
+        return ($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId));
+    }
 }

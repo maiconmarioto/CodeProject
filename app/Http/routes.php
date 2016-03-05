@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('app');
 });
 
 Route::post('oauth/access_token', function () {
@@ -21,7 +21,7 @@ Route::group(['middleware' => 'oauth'], function () {
 
 		Route::get('file/{fileId}', 'ProjectFileController@show');
 		Route::post('file', 'ProjectFileController@store');
-		Route::delete('file/{fileId}', 'ProjectFileController@show');
+		Route::delete('file/{fileId}', 'ProjectFileController@destroy');
 
 	});
 });

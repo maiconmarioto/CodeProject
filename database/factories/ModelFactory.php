@@ -46,7 +46,7 @@ $factory->define(CodeProject\Entities\Project::class, function (Faker\Generator 
 		'progress' => rand(1,100),
 		'status' => rand(1,3),
 		'due_date' => $faker->dateTime('now'),
-		'owner_id' => rand(1,10),
+		'owner_id' => rand(8,10),
 		'client_id' => rand(1,10),
 	];
 });

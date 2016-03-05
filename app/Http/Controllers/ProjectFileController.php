@@ -2,147 +2,66 @@
 
 namespace CodeProject\Http\Controllers;
 
-
-use CodeProject\Http\Requests;
-use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Service\ProjectService;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\QueryException;
+use CodeProject\Repositories\ProjectFileRepository;
+use CodeProject\Service\ProjectFileService;
 use Illuminate\Http\Request;
-use LucaDegasperi\OAuth2Server\Exceptions\NoActiveAccessTokenException;
 
-
-class ProjectFileController extends Controller
-{
+class ProjectFileController extends Controller {
     /**
-     * @var ProjectRepository
+     * @var ProjectFileService
+     */
+    protected $service;
+    /**
+     * @var ProjectFileRepository
      */
     private $repository;
     /**
-     * @var ProjectService
+     * @param ProjectFileRepository $repository
+     * @param ProjectFileService    $service
      */
-    private $service;
-
-
-
-    /**
-     * ProjectController constructor.
-     * @param ProjectRepository $repository
-     * @param ProjectService $service
-     */
-    public function __construct(ProjectRepository $repository, ProjectService $service)
+    public function __construct(ProjectFileRepository $repository, ProjectFileService $service)
     {
-
         $this->repository = $repository;
-        $this->service = $service;
+        $this->service    = $service;
     }
-
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return Response
      */
-    public function index()
+    public function index($id)
     {
-        return $this->repository->with(['owner','client'])->findWhere(['owner_id' => \Authorizer::getResourceOwnerId() ]);
+        return $this->repository->findWhere(['project_id' => $id]);
     }
-
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  Request $request
+     * @return Response
      */
-    public function store(Request $request, $id)
+    public function store($id, Request $request)
     {
-        $file = $request->file('file');
-
-        if(!$file){
-            return response()->json(['erro' => true, 'mensagem' => 'O Arquivo é obrigatório!']);
-        }
-
-        $extension = $file->getClientOriginalExtension();
-        $data['file'] = $file;
-        $data['extension'] = $extension;
-        $data['name'] = $request->name;
-        $data['description'] = $request->description;
-        $data['project_id'] = $request->project_id;
-        $this->service->createFile($data);
+        return $this->service->create($id, $request);
     }
-
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return Response
      */
-    public function show($id)
+    public function show($id, $fileId)
     {
-
+        return $this->repository->findWhere(['project_id' => $id, 'id' => $fileId]);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        if ($this->isNotOwner($id) and $this->isNotMember($id)){
-            return ['error'=>'true','message'=>'Access Forbidden'];
-        }
-        return $this->service->update($request->all(), $id);
-    }
-
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  int $id
+     * @return Response
      */
-    public function destroy($id)
+    public function destroy($id, $fileId)
     {
-        try
-        {
-            if(!$this->checkProjectOwner($id)){
-                return $this->erroMsgm("O usuário não tem acesso a esse projeto");
-            }
-            $this->repository->find($id)->delete();
-        }
-        catch(QueryException $e){
-            return $this->erroMsgm('Projeto não pode ser apagado pois existe um ou mais clientes vinculados a ele.');
-        }
-        catch(ModelNotFoundException $e){
-            return $this->erroMsgm('Projeto não encontrado.');
-        }
-        catch(NoActiveAccessTokenException $e){
-            return $this->erroMsgm('Usuário não está logado.');
-        }
-        catch(\Exception $e){
-            return $this->erroMsgm('Ocorreu um erro ao excluir o projeto.');
-        }
+        return $this->service->delete($id, $fileId);
     }
-
-
-    private function checkProjectOwner($projectId)
-    {
-        $userId = \Authorizer::getResourceOwnerId();
-        return $this->repository->isOwner($projectId,$userId);
-    }
-    private function checkProjectMember($projectId)
-    {
-        $userId = \Authorizer::getResourceOwnerId();
-        return $this->repository->hasMember($projectId,$userId);
-    }
-
-    private function checkProjectPermissions($projectId)
-    {
-        if($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId)){
-            return true;
-        }
-        return false;
-    }
-
 }
