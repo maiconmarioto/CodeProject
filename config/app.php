@@ -138,6 +138,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
@@ -148,6 +149,7 @@ return [
         CodeProject\Providers\CodeProjectRepositoryProvider::class,
         LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ],
 
     /*

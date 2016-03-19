@@ -47,25 +47,25 @@ class ClientController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        return  ['success' => $this->service->create($request->all())];
+        return ['success' => $this->service->create($request->all())];
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         try {
             return [$this->repository->find($id)];
-        } catch(ModelNotFoundException  $e){
+        } catch (ModelNotFoundException  $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
     }
@@ -73,23 +73,23 @@ class ClientController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @param  \Illuminate\Http\Request  $request
+     * @param  int $id
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-   public function update($id, Request $request)
-   {
-       try {
-           return ['success' => $this->service->update($request->all(), $id)];
-       } catch(ModelNotFoundException  $e) {
-           return response()->json(['success' => 'false', 'message' => 'record not found']);
-       }
-   }
+    public function update($id, Request $request)
+    {
+        try {
+            return ['success' => $this->service->update($request->all(), $id)];
+        } catch (ModelNotFoundException  $e) {
+            return response()->json(['success' => 'false', 'message' => 'record not found']);
+        }
+    }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

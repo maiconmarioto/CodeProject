@@ -130,22 +130,46 @@ class ProjectController extends Controller {
      * @param $projectId
      * @return mixed
      */
+//    private function checkProjectOwner($projectId)
+//    {
+//        $userId = \Authorizer::getResourceOwnerId();
+//        return (bool)$this->repository->isOwner($projectId, $userId);
+//    }
+//    private function checkProjectMember($projectId)
+//    {
+//        $userId = \Authorizer::getResourceOwnerId();
+//        return (bool)$this->repository->isMember($projectId, $userId);
+//    }
+//
+//    private function checkProjectPermissions($projectId)
+//    {
+//        if($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)){
+//            return true;
+//        }
+//        return false;
+//    }
+//
+
     private function checkProjectOwner($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
-        return (bool)$this->repository->isOwner($projectId, $userId);
+
+        return $this->repository->isOwner($projectId,$userId);
     }
+
     private function checkProjectMember($projectId)
     {
         $userId = \Authorizer::getResourceOwnerId();
-        return (bool)$this->repository->isMember($projectId, $userId);
+
+        return $this->repository->hasMember($projectId,$userId);
     }
 
     private function checkProjectPermissions($projectId)
     {
-        if($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)){
+        if($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId)){
             return true;
         }
+
         return false;
     }
 }
