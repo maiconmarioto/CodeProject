@@ -5,12 +5,6 @@ var elixir = require('laravel-elixir'),
 
 require('laravel-elixir-livereload');
 
-//elixir(function(mix) {
-//    mix.browserSync();
-//    //  mix.livereload();
-//});
-
-
 var config = {
     assets_path: './resources/assets',
     build_path:  './public/build'
