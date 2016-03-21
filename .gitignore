@@ -4,3 +4,6 @@ Homestead.yaml
 Homestead.json
 resources/bower_components
 .env
+.phpstorm.meta.php
+.phpintel
+.idea

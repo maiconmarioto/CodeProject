@@ -18,6 +18,6 @@ angular.module('app.controllers')
                     $scope.error.error = true;
                     $scope.error.message = data.data.error_description;
                 });
-            };
+            };''
         };
     }]);
