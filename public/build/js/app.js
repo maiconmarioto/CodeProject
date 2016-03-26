@@ -1,51 +1,58 @@
 var app = angular.module('app',['ngRoute','angular-oauth2','app.controllers','app.services']);
 
-angular.module('app.controllers', ['ngMessages', 'angular-oauth2']);
-angular.module('app.services', ['ngResource']);
+angular.module('app.controllers',['ngMessages','angular-oauth2']);
+
+angular.module('app.services',['ngResource']);
 
 app.provider('appConfig', function(){
     var config = {
         baseUrl: 'http://codeproject.dev'
     };
-
     return {
-        config : config,
+        config: config,
         $get: function(){
             return config;
         }
     }
 });
 
-app.config([
-    '$routeProvider','OAuthProvider', 'OAuthTokenProvider', 'appConfigProvider',
-    function ($routeProvider,OAuthProvider, OAuthTokenProvider, appConfigProvider) {
+app.config( [
+    '$routeProvider','OAuthProvider','OAuthTokenProvider','appConfigProvider',
+    function( $routeProvider,OAuthProvider,OAuthTokenProvider,appConfigProvider ){
         $routeProvider
-            .when('/login', {
+            .when('/login',{
                 templateUrl: 'build/views/login.html',
-                controller: 'loginController'
-            })
+                controller: 'LoginController'})
             .when('/home', {
                 templateUrl: 'build/views/home.html',
-                controller: 'homeController'
-            })
+                controller: 'HomeController'})
             .when('/clients', {
                 templateUrl: 'build/views/client/list.html',
-                controller: 'ClientListController'
-            });
+                controller: 'ClientListController'})
+
+            .when('/clients/new', {
+                templateUrl: 'build/views/client/new.html',
+                controller: 'ClientNewController'})
+
+            .when('/clients/:id/edit', {
+                templateUrl: 'build/views/client/edit.html',
+                controller: 'ClientEditController'});
 
         OAuthProvider.configure({
             baseUrl: appConfigProvider.config.baseUrl,
-            clientId: 'appId1',
+            clientId: 'appid1',
             clientSecret: 'secret',
             grantPath: 'oauth/access_token'
+
         });
 
         OAuthTokenProvider.configure({
             name: 'token',
-            options : {
+            options: {
                 secure: false
             }
         });
+
     }]);
 
 app.run(['$rootScope', '$window', 'OAuth', function($rootScope, $window, OAuth) {

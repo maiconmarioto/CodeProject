@@ -1,5 +1,5 @@
 angular.module('app.controllers')
-    .controller('loginController',['$scope', '$location','OAuth', function($scope, $location, OAuth){
+    .controller('LoginController',['$scope', '$location','OAuth', function($scope, $location, OAuth){
         $scope.user = {
             username: '',
             password: ''

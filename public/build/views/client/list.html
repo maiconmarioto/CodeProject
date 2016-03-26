@@ -12,18 +12,21 @@
                                 <th>Responsible</th>
                                 <th>E-mail</th>
                                 <th>Phone</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="list in client.data">
+                            <tr ng-repeat="o in client">
                                 <td>{{o.name}}</td>
                                 <td>{{o.responsible}}</td>
                                 <td>{{o.email}}</td>
                                 <td>{{o.phone}}</td>
+                                <td>
+                                    <a ng-href="#/clients/{{o.id}}/edit">Editar</a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>

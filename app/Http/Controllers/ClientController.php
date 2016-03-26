@@ -38,7 +38,7 @@ class ClientController extends Controller
     public function index()
     {
         try {
-            return [$this->repository->all()];
+            return $this->repository->skipPresenter()->all();
         } catch (ModelNotFoundException $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
