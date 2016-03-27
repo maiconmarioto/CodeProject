@@ -38,7 +38,7 @@ class ClientController extends Controller
     public function index()
     {
         try {
-            return $this->repository->skipPresenter()->all();
+            return $this->repository->all();
         } catch (ModelNotFoundException $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
@@ -52,7 +52,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        return ['success' => $this->service->create($request->all())];
+        return $this->service->create($request->all());
     }
 
     /**
@@ -64,7 +64,7 @@ class ClientController extends Controller
     public function show($id)
     {
         try {
-            return [$this->repository->find($id)];
+            return $this->repository->find($id);
         } catch (ModelNotFoundException  $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }
@@ -80,7 +80,7 @@ class ClientController extends Controller
     public function update($id, Request $request)
     {
         try {
-            return ['success' => $this->service->update($request->all(), $id)];
+            return $this->service->update($request->all(), $id);
         } catch (ModelNotFoundException  $e) {
             return response()->json(['success' => 'false', 'message' => 'record not found']);
         }

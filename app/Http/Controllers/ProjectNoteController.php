@@ -38,7 +38,7 @@ class ProjectNoteController extends Controller
     public function index($id)
     {
         try{
-            return [$this->repository->findWhere(['project_id' => $id])];
+            return $this->repository->findWhere(['project_id' => $id]);
         } catch(ModelNotFoundException  $e) {
             return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
         }
@@ -52,7 +52,7 @@ class ProjectNoteController extends Controller
      */
     public function store(Request $request)
     {
-       return ['success' => $this->service->create($request->all())];
+       return $this->service->create($request->all());
     }
 
     /**
@@ -64,7 +64,7 @@ class ProjectNoteController extends Controller
     public function show($id, $noteId)
     {
         try {
-            return [$this->repository->findWhere(['project_id' => $id, 'id' => $noteId])];
+            return $this->repository->findWhere(['project_id' => $id, 'id' => $noteId]);
         } catch (ModelNotFoundException  $e) {
             return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
         }
@@ -80,7 +80,7 @@ class ProjectNoteController extends Controller
     public function update(Request $request, $id, $noteId)
     {
         try{
-            return ['success' => $this->service->update($request->all(),$noteId)];
+            return $this->service->update($request->all(),$noteId);
         } catch(ModelNotFoundException  $e) {
             return response()->json(['Erro' => true, 'Mensagem' => 'Registro nao localizado']);
         }
@@ -95,7 +95,7 @@ class ProjectNoteController extends Controller
     public function destroy($id, $noteId)
     {
         try{
-            return ['success' => $this->repository->delete($noteId)];
+            return $this->repository->delete($noteId);
         } catch(ModelNotFoundException  $e) {
             return response()->json(['Erro' => true, 'Mensagem' => 'Registro nao localizado']);
         }

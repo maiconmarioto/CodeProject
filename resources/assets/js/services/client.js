@@ -2,10 +2,13 @@ angular.module('app.services')
     .factory('Client',
         ['$resource', 'appConfig',
             function ($resource, appConfig) {
-                return $resource(appConfig.baseUrl + '/client/:id', {id: '@id'},
-                    {
-                        query: {isArray: false},
-                        update: {method: 'PUT'}
+                return $resource(appConfig.baseUrl + '/client/:id', {id: '@id'}, {
+                    update: {
+                        method: 'PUT'
+                    },
+                    query: {
+                        method: 'GET',
+                        isArray: true
                     }
-                );
+                });
             }]);

@@ -41,6 +41,26 @@ config.vendor_path_css = [
 ];
 
 config.build_path_html  = config.build_path + '/views';
+config.build_path_font  = config.build_path + '/fonts';
+config.build_path_images  = config.build_path + '/images';
+
+gulp.task('copy-fonts', function(){
+    gulp.src([
+            config.assets_path + '/fonts/**/*'
+        ])
+        .pipe(gulp.dest(config.build_path_font))
+        .pipe(liveReload());
+
+});
+
+gulp.task('copy-images', function(){
+    gulp.src([
+            config.assets_path + '/images/**/*'
+        ])
+        .pipe(gulp.dest(config.build_path_images))
+        .pipe(liveReload());
+
+});
 
 gulp.task('copy-html', function(){
     gulp.src([
@@ -82,7 +102,7 @@ gulp.task('clear-build-folder', function(){
 
 
 gulp.task('default', ['clear-build-folder'], function(){
-    gulp.start('copy-html');
+    gulp.start('copy-html','copy-fonts', 'copy-images');
     elixir(function(mix){
         mix.styles(config.vendor_path_css.concat([config.assets_path + '/css/**/*.css']),
             'public/css/all.css', config.assets_path);
@@ -96,7 +116,7 @@ gulp.task('default', ['clear-build-folder'], function(){
 
 gulp.task('watch-dev',['clear-build-folder'], function(){
     liveReload.listen();
-    gulp.start('copy-styles','copy-scripts','copy-html');
+    gulp.start('copy-styles','copy-scripts','copy-html','copy-fonts', 'copy-images');
     gulp.watch(config.assets_path + '/**', ['copy-styles','copy-scripts','copy-html']);
 });
 
