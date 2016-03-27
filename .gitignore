@@ -7,3 +7,4 @@ resources/bower_components
 phpstorm.meta.php
 .phpintel
 .idea
+/public/build

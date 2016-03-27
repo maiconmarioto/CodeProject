@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1bbc45a-465f-464d-9219-826afd44afd2" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/fonts/FontAwesome.otf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.ttf" />
@@ -117,6 +118,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/client.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular-animate.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular-cookies.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-cookies.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular-messages.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-messages.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular-resource.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-resource.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular-route.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-route.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/angular.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/jquery.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/vendor/ui-bootstrap.min.js" afterPath="$PROJECT_DIR$/public/build/js/vendor/ui-bootstrap.min.js" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
     </list>
     <ignored path="CodeProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -158,8 +172,13 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="projectNoteList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js">
+=======
+      <file leaf-file-name="clientEdit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js">
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
@@ -171,8 +190,33 @@
       <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/js/services/client.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="234">
               <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+=======
+            <state relative-caret-position="180">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
               <folding />
             </state>
           </provider>
@@ -214,6 +258,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/ProjectNoteTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Presenters/ProjectTaskPresenter.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/ProjectTaskTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Presenters/ProjectNotePresenter.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/ProjectMemberRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Presenters/ProjectMemberPresenter.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/ProjectMemberTransformer.php" />
+        <option value="$PROJECT_DIR$/app/Presenters/ClientPresenter.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/resources/app.blade.php" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.env" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
         <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectTaskRepositoryEloquent.php" />
@@ -243,6 +305,7 @@
         <option value="$PROJECT_DIR$/resources/assets/js/views/client/edit.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/resources/assets/js/views/client/remove.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
@@ -265,6 +328,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+=======
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
       </list>
     </option>
   </component>
@@ -283,7 +350,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="1366" />
+=======
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
     <option name="y" value="27" />
     <option name="width" value="1920" />
     <option name="height" value="1053" />
@@ -365,6 +435,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -647,6 +718,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -785,14 +858,22 @@
       <updated>1456400711021</updated>
       <workItem from="1458865731761" duration="5927000" />
       <workItem from="1458939328621" duration="700000" />
+<<<<<<< HEAD
       <workItem from="1458998303420" duration="4780000" />
       <workItem from="1459003492797" duration="4942000" />
       <workItem from="1459080729655" duration="5315000" />
+=======
+      <workItem from="1458998303420" duration="5144000" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="21664000" />
+=======
+    <option name="totallyTimeSpent" value="11771000" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,6 +885,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="1366" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -814,6 +896,22 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32741398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2828877" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49568033" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -827,7 +925,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="ReST Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49568033" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1139,6 +1236,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1148,6 +1246,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/list.html">
+=======
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="36" />
@@ -1195,6 +1296,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteShow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1204,6 +1306,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+=======
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/home.js">
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="96" column="71" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
@@ -1235,7 +1340,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js">
+=======
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/client/edit.html">
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
@@ -1245,16 +1362,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/views/project-note/list.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="306">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+=======
+        <state relative-caret-position="180">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+>>>>>>> d5050f5ceb611c93d7fddad5766f3d18f8298620
           <folding />
         </state>
       </provider>
