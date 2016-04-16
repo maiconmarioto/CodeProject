@@ -15,29 +15,24 @@ class Project extends Model {
         'due_date',
     ];
 
-
+    public function notes()
+    {
+        return $this->hasMany(ProjectNote::class);
+    }
     public function owner()
     {
-        return $this->belongsTo(\CodeProject\Entities\User::class, 'owner_id');
+        return $this->belongsTo(User::class);
     }
     public function client()
     {
-        return $this->belongsTo(\CodeProject\Entities\Client::class);
-    }
-    public function notes()
-    {
-        return $this->hasMany(\CodeProject\Entities\ProjectNote::class);
-    }
-    public function tasks()
-    {
-        return $this->hasMany(\CodeProject\Entities\ProjectTask::class);
+        return $this->belongsTo(Client::class);
     }
     public function members()
     {
-        return $this->belongsToMany(\CodeProject\Entities\User::class, 'project_members');
+        return $this->belongsToMany(User::class, 'project_members', 'project_id', 'member_id');
     }
     public function files()
     {
-        return $this->hasMany(\CodeProject\Entities\ProjectFile::class);
+        return $this->hasMany(ProjectFile::class);
     }
 }

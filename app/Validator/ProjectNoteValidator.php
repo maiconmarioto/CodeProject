@@ -14,7 +14,7 @@ use Prettus\Validator\LaravelValidator;
 class ProjectNoteValidator extends LaravelValidator
 {
     protected $rules = [
-        'owner_id' => 'integer|required',
+        'project_id' => 'integer|required',
         'title' => 'required',
         'note' => 'required',
 

@@ -40,18 +40,31 @@ public function __construct(ProjectNoteRepository $repository, ProjectNoteValida
 /**
  * @param array $data
  * @return array|mixed
- */
+// */
+//public function create(array $data)
+//{
+//    try {
+//        $this->validator->with($data)->passesOrFail();
+//        return $this->repository->create($data);
+//    } catch (ValidatorException $e){
+//        return [
+//                'error' => true,
+//                'message' => $e->getMessageBag()
+//            ];
+//    }
+//}
+
 public function create(array $data)
 {
     try {
         $this->validator->with($data)->passesOrFail();
         return $this->repository->create($data);
-    } catch (ValidatorException $e){
+    } catch(ValidatorException $e) {
         return [
-                'error' => true,
-                'message' => $e->getMessageBag()
-            ];
-    }
+            'error' => true,
+            'message' => $e->getMessageBag()
+        ];
+    };
 }
 
 

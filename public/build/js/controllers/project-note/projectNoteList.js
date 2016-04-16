@@ -1,5 +1,7 @@
 angular.module('app.controllers')
-    .controller('ProjectNoteListController', [
-        '$scope', '$routeParams', 'ProjectNote', function ($scope, $routeParams, ProjectNote) {
-            $scope.projectNotes = ProjectNote.query({id: $routeParams.id});
-        }]);
+    .controller('ProjectNoteListController',['$scope','ProjectNote','$routeParams',function($scope,ProjectNote,$routeParams){
+        $scope.projectNote = ProjectNote.query({
+            id: $routeParams.id,
+            noteId: $routeParams.noteId
+        });
+    }]);

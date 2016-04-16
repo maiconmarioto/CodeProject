@@ -56,12 +56,13 @@ class ProjectController extends Controller {
 
         $owner = \Authorizer::getResourceOwnerId();
 
-        $project = $this->repository->findWhere(['id' => $id, 'owner_id' => $owner]);
+        $project = $this->repository->with(['owner','client'])->findWhere(['id' => $id, 'owner_id' => $owner]);
 
         if (empty($project['data'])){
             return response()->json(['erro' => true, 'message' => 'Acesso proibido']);
         }
         return $project;
+
     }
     /**
      * @param Request $request
@@ -106,7 +107,7 @@ class ProjectController extends Controller {
      */
     public function members($id)
     {
-        return $this->repository->skipPresenter()->find($id)->members;
+        return $this->repository->find($id)->members;
     }
     /**
      * @param $id
