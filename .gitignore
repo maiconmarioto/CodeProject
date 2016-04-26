@@ -1,5 +1,6 @@
 /vendor
 /node_modules
+/public
 Homestead.yaml
 Homestead.json
 resources/bower_components
@@ -7,4 +8,3 @@ resources/bower_components
 phpstorm.meta.php
 .phpintel
 .idea
-/public/build

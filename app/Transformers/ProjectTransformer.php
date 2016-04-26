@@ -9,11 +9,13 @@
 namespace CodeProject\Transformers;
 
 use CodeProject\Entities\Project;
+use CodeProject\Entities\ProjectMember;
 use League\Fractal\TransformerAbstract;
 
 class ProjectTransformer extends TransformerAbstract
 {
-//    protected $defaultIncludes = ['members'];
+    protected $defaultIncludes = ['members', 'client'];
+
 
 
     public function transform(Project $project)
@@ -38,8 +40,9 @@ class ProjectTransformer extends TransformerAbstract
 
     public function includeClient(Project $project)
     {
-        return $this->collection($project->clients, new ClientTransformer());
+        return $this->item($project->client, new ClientTransformer());
     }
+
 
 
 #    public function includeMembers(Project $project)

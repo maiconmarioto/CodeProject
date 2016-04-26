@@ -1,11 +1,20 @@
-var app = angular.module('app', ['ngRoute', 'angular-oauth2', 'app.controllers', 'app.services']);
+var app = angular.module('app', ['ngRoute', 'angular-oauth2', 'app.controllers', 'app.filters', 'app.services']);
 angular.module('app.controllers', ['ngMessages', 'angular-oauth2']);
+angular.module('app.filters',[]);
 angular.module('app.services', ['ngResource']);
 
 app.provider('appConfig', function () {
     var config = {
-        baseUrl: 'http://codeproject.dev'
+        baseUrl: 'http://codeproject.dev',
+        project: {
+            status: [
+                {value: '1', label: 'Não Iniciado'},
+                {value: '2', label: 'Iniciado'},
+                {value: '3', label: 'Concluido'}
+            ]
+        }
     };
+
     return {
         config: config,
         $get: function () {
@@ -17,6 +26,7 @@ app.provider('appConfig', function () {
 app.config([
     '$routeProvider', '$httpProvider', 'OAuthProvider', 'OAuthTokenProvider', 'appConfigProvider',
     function ($routeProvider, $httpProvider, OAuthProvider, OAuthTokenProvider, appConfigProvider) {
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
         $httpProvider.defaults.transformResponse = function (data, headers) {
             var headersGetter = headers();
             if (headersGetter['content-type'] == 'application/json' || headersGetter['content-type'] == 'text/json') {

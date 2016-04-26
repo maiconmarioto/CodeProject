@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maicon
- * Date: 21/02/16
- * Time: 19:06
- */
 
 namespace CodeProject\Presenters;
 

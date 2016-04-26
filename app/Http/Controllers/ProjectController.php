@@ -70,7 +70,7 @@ class ProjectController extends Controller {
      */
     public function store(Request $request)
     {
-        return $this->service->create($request->all());
+        return $this->repository->create($request->all());
     }
     /**
      * Update the specified resource in storage.
