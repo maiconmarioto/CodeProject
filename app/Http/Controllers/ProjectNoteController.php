@@ -45,14 +45,16 @@ class ProjectNoteController extends Controller
      */
     public function index($id)
     {
-            
-            if ($this->proRepo->findWhere(['id' => $id,'owner_id' => $member]) || $this->proRepo->findWhere(['id' => $id,'client_id' => $member])){
+
+        $member = \Authorizer::getResourceOwnerId();
+
+            if ($this->proRepo->findWhere(['id' => $id,'owner_id' => $member]) and $this->proRepo->findWhere(['id' => $id,'client_id' => $member])){
                 try {
                     return $this->repository->findWhere(['project_id' => $id]);
                 } catch (ModelNotFoundException  $e) {
                     return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
                 }
-            }            
+            }
     }
 
     /**
@@ -74,6 +76,8 @@ class ProjectNoteController extends Controller
      */
     public function show($id, $noteId)
     {
+        $member = \Authorizer::getResourceOwnerId();
+
         $result = $this->repository->findWhere(['project_id' => $id, 'id' => $noteId]);
         if(isset($result['data']) && count($result['data'])==1){
             $result = [

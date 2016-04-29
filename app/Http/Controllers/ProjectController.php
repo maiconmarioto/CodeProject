@@ -49,19 +49,17 @@ class ProjectController extends Controller {
      */
     public function show($id)
     {
-        if (!$this->checkProjectPermissions($id))
-        {
+        if (!$this->checkProjectPermissions($id))        {
             return ['error' => 'Access Forbidden'];
         }
 
-        $owner = \Authorizer::getResourceOwnerId();
-
-        $project = $this->repository->with(['owner','client'])->findWhere(['id' => $id, 'owner_id' => $owner]);
+        $project = $this->repository->with(['owner','client'])->find($id);
 
         if (empty($project['data'])){
             return response()->json(['erro' => true, 'message' => 'Acesso proibido']);
         }
         return $project;
+
 
     }
     /**
@@ -85,7 +83,7 @@ class ProjectController extends Controller {
         {
             return ['error' => 'Access Forbidden'];
         }
-        return $this->service->update($request->all(), $id);
+        return $this->repository->update($request->all(), $id);
     }
     /**
      * Remove the specified resource from storage.
@@ -99,7 +97,7 @@ class ProjectController extends Controller {
         {
             return ['error' => 'Access Forbidden'];
         }
-        return $this->repository->delete($id);
+        return ['success' => $this->repository->delete($id)];
     }
     /**
      * @param $id
