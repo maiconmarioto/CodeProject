@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 /public
+/database/mysql
 Homestead.yaml
 Homestead.json
 resources/bower_components
