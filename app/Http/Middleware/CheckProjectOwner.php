@@ -7,15 +7,10 @@ use CodeProject\Repositories\ProjectRepository;
 
 class CheckProjectOwner
 {
-
-    /**
-     * @var ProjectRepository
-     */
-    private $repository;
+    protected $repository;
 
     public function __construct(ProjectRepository $repository)
     {
-
         $this->repository = $repository;
     }
 
@@ -31,10 +26,9 @@ class CheckProjectOwner
         $userId = \Authorizer::getResourceOwnerId();
         $projectId = $request->project;
 
-        if($this->repository->isOwner($projectId, $userId) == false){
-            return ['success' => 'Access forbidden'];
+        if($this->repository->isOwner($projectId,$userId) == false){
+            return ['error'=>"Access forbidden"];
         }
-
 
         return $next($request);
     }

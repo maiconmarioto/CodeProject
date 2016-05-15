@@ -2,17 +2,10 @@
 
 namespace CodeProject\Http;
 
-use CodeProject\Repositories\ProjectRepository;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
-
-    /**
-     * @var ProjectRepository
-     */
-
-
     /**
      * The application's global HTTP middleware stack.
      *
@@ -36,7 +29,7 @@ class Kernel extends HttpKernel
         'auth' => \CodeProject\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \CodeProject\Http\Middleware\RedirectIfAuthenticated::class,
-        'csrf'  => \CodeProject\Http\Middleware\VerifyCsrfToken::class,
+        'csrf' =>   \CodeProject\Http\Middleware\VerifyCsrfToken::class,
         'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
         'oauth-user' => \LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
         'oauth-client' => \LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,

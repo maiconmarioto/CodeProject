@@ -5,16 +5,16 @@ namespace CodeProject\Transformers;
 use CodeProject\Entities\ProjectFile;
 use League\Fractal\TransformerAbstract;
 
-class ProjectFileTransformer extends TransformerAbstract {
-
-    public function transform(ProjectFile $model)
+class ProjectFileTransformer extends TransformerAbstract
+{
+    public function transform(ProjectFile $o)
     {
         return [
-            'project_id'  => $model->project_id,
-            'id'          => $model->id,
-            'name'        => $model->name,
-            'description' => $model->description,
-            'extension'   => $model->extension
+            'id' => $o->id,
+            'name' => $o->name,
+            'extension' => $o->extension,
+            'description' => $o->description,
         ];
     }
+
 }

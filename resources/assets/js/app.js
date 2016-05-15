@@ -1,5 +1,6 @@
 var app = angular.module('app', [
-    'ngRoute', 'angular-oauth2', 'app.controllers', 'app.services' , 'app.filters','ui.bootstrap.typeahead', 'ui.bootstrap.tpls'
+    'ngRoute', 'angular-oauth2', 'app.controllers', 'app.services' , 'app.filters','ui.bootstrap.typeahead',
+    'ui.bootstrap.datepicker', 'ui.bootstrap.tpls','ngFileUpload'
 ]);
 
 angular.module('app.controllers', ['ngMessages', 'angular-oauth2']);
@@ -106,6 +107,25 @@ app.config([
                 controller: 'ProjectNoteRemoveController'
             })
 
+
+            // Project File
+            .when('/project/:id/file', {
+                templateUrl: 'build/views/project-file/list.html',
+                controller: 'ProjectFileListController'
+            })
+            .when('/project/:id/file/new', {
+                templateUrl: 'build/views/project-file/new.html',
+                controller: 'ProjectFileNewController'
+            })
+            .when('/project/:id/file/:idFile/edit', {
+                templateUrl: 'build/views/project-file/edit.html',
+                controller: 'ProjectFileEditController'
+            })
+            .when('/project/:id/file/:idFile/remove', {
+                templateUrl: 'build/views/project-file/remove.html',
+                controller: 'ProjectFileRemoveController'
+            })
+
             // Projects
             .when('/projects', {
                 templateUrl: 'build/views/project/list.html',
@@ -119,7 +139,7 @@ app.config([
                 templateUrl: 'build/views/project/edit.html',
                 controller: 'ProjectEditController'
             })
-            .when('/project/:id/remove', {
+            .when('/projects/:id/remove', {
                 templateUrl: 'build/views/project/remove.html',
                 controller: 'ProjectRemoveController'
             });

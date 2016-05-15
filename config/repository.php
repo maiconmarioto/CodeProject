@@ -34,7 +34,7 @@ return [
         'params'=>[
             'include'=>'include'
         ],
-        'serializer' => League\Fractal\Serializer\DataArraySerializer::class
+        'serializer' => \CodeProject\Serializers\DataArraySerializer::class
     ],
 
     /*
@@ -219,7 +219,7 @@ return [
     */
     'generator'=>[
         'basePath'=>app_path(),
-        'rootNamespace'=>'App\\',
+        'rootNamespace'=>'CodeProject\\',
         'paths'=>[
             'models'=>'Entities',
             'repositories'=>'Repositories',

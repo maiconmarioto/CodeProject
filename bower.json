@@ -1,12 +1,12 @@
 {
-  "name": "Codeproject",
-  "description": "Frontend CodeProject",
+  "name": "laravel-codeproject-frontend",
+  "description": "front-end do codeproject",
   "main": "",
   "authors": [
-    "Maicon Marioto <maicon.marioto@gmail.com>"
+    "Nilton Morais <niltonmorais123@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/maiconmarioto/CodeProject",
+  "homepage": "https://github.com/NiltonMorais/laravel_angularjs_codeproject",
   "moduleType": [],
   "ignore": [
     "**/.*",
@@ -17,14 +17,15 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.5.0",
-    "angular-route": "1.5.0",
-    "angular-resource": "1.5.0",
-    "angular-animate": "1.5.0",
-    "angular-messages": "1.5.0",
-    "angular-bootstrap": "0.14.0",
+    "angular": "1.4.1",
+    "angular-route": "1.4.1",
+    "angular-resource": "1.4.1",
+    "angular-animate": "1.4.1",
+    "angular-messages": "1.4.1",
+    "angular-bootstrap": "0.13.4",
     "angular-strap": "2.2.4",
     "bootstrap": "3.3.5",
-    "angular-oauth2": "^4.0.0"
+    "angular-oauth2": "^4.0.0",
+    "ng-file-upload": "7.0.17"
   }
 }

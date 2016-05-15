@@ -10,10 +10,15 @@ class ProjectNote extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = ['project_id','title','note'];
+    protected $fillable = [
+        'project_id',
+        'title',
+        'note',
+    ];
 
     public function project()
     {
         return $this->belongsTo(Project::class);
     }
+
 }

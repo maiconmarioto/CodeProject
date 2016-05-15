@@ -1,18 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maicon
- * Date: 21/02/16
- * Time: 19:06
- */
 
 namespace CodeProject\Presenters;
 
 use CodeProject\Transformers\ProjectTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
+
 class ProjectPresenter extends FractalPresenter
 {
+
+    /**
+     * Transformer
+     *
+     * @return \League\Fractal\TransformerAbstract
+     */
     public function getTransformer()
     {
         return new ProjectTransformer();

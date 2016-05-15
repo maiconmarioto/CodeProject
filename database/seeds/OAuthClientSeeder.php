@@ -11,6 +11,15 @@ class OAuthClientSeeder extends Seeder
      */
     public function run()
     {
-        factory(\CodeProject\Entities\OAuthClient::class, 1)->create();
+        DB::table('oauth_clients')->insert([
+            [
+                'id' => 'appid1',
+                'secret' => 'secret',
+                'name' => 'App AngularJS',
+                'created_at' =>  '03/02/2016',
+                'updated_at' =>  '03/02/2016',
+            ]
+        ]);
+
     }
 }

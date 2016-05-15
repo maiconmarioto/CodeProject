@@ -2,40 +2,27 @@
 
 namespace CodeProject\Http\Controllers;
 
+use CodeProject\Http\Requests;
 use CodeProject\Repositories\ProjectNoteRepository;
-use CodeProject\Repositories\ProjectRepository;
-
-use CodeProject\Service\ProjectNoteService;
-use CodeProject\Service\ProjectService;
+use CodeProject\Services\ProjectNoteService;
 use Illuminate\Http\Request;
-
 
 class ProjectNoteController extends Controller
 {
     /**
-     * @var ProjectRepository
+     * @var ProjectNoteRepository
      */
     private $repository;
+
     /**
-     * @var ProjectService
+     * @var ProjectNoteService
      */
     private $service;
 
-    private $proRepo;
-
-    private $proServ;
-
-    /**
-     * ProjectNoteController constructor.
-     * @param ProjectNoteRepository $repository
-     * @param ProjectNoteService $service
-     */
-    public function __construct(ProjectNoteRepository $repository, ProjectNoteService $service, ProjectRepository $proRepo, ProjectService $proServ)
+    public function __construct(ProjectNoteRepository $repository, ProjectNoteService $service)
     {
         $this->repository = $repository;
         $this->service = $service;
-        $this->proRepo = $proRepo;
-        $this->proServ = $proServ;
     }
 
     /**
@@ -45,22 +32,13 @@ class ProjectNoteController extends Controller
      */
     public function index($id)
     {
-
-        $member = \Authorizer::getResourceOwnerId();
-
-            if ($this->proRepo->findWhere(['id' => $id,'owner_id' => $member]) and $this->proRepo->findWhere(['id' => $id,'client_id' => $member])){
-                try {
-                    return $this->repository->findWhere(['project_id' => $id]);
-                } catch (ModelNotFoundException  $e) {
-                    return response()->json(['Erro' => '1', 'Mensagem' => 'Registro nao localizado']);
-                }
-            }
+        return $this->repository->findWhere(['project_id' => $id]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -71,50 +49,45 @@ class ProjectNoteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id, $noteId)
     {
-        $member = \Authorizer::getResourceOwnerId();
-
-        $result = $this->repository->findWhere(['project_id' => $id, 'id' => $noteId]);
-        if(isset($result['data']) && count($result['data'])==1){
+        $result = $this->repository->findWhere(['project_id'=>$id, 'id'=>$noteId]);
+        if(isset($result['data']) && count($result['data'])==1) {
             $result = [
-            'data' => $result['data'][0]
+                'data' => $result['data'][0]
             ];
         }
         return $result;
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id, $noteId)
     {
         return $this->service->update($request->all(), $noteId);
-//        try{
-//            return $this->service->update($request->all(),$noteId);
-//        } catch(ModelNotFoundException  $e) {
-//            return response()->json(['Erro' => true, 'Mensagem' => 'Registro nao localizado']);
-//        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id, $noteId)
     {
-        try {
-            return ['Success' => $this->repository->delete($id)];
-        } catch (ModelNotFoundException  $e) {
-            return response()->json(['success' => 'false', 'message' => 'record not found']);
+        if($this->repository->skipPresenter()->find($noteId)->delete()){
+            return ['success'=>true, 'message'=>'Nota '.$noteId.' excluída com sucesso!'];
         }
+        return ['error'=>true, 'message'=>'Não foi possível excluir a nota '.$noteId];
     }
 }

@@ -3,172 +3,298 @@
 namespace CodeProject\Http\Controllers;
 
 use CodeProject\Http\Requests;
-use CodeProject\Presenters\ProjectMemberPresenter;
-use CodeProject\Repositories\ProjectMemberRepository;
 use CodeProject\Repositories\ProjectRepository;
-use CodeProject\Service\ProjectService;
+use CodeProject\Repositories\ProjectTaskRepository;
+use CodeProject\Services\ProjectService;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use LucaDegasperi\OAuth2Server\Exceptions\NoActiveAccessTokenException;
+use LucaDegasperi\OAuth2Server\Facades\Authorizer;
+use Prettus\Validator\Exceptions\ValidatorException;
 
-class ProjectController extends Controller {
+class ProjectController extends Controller
+{
     /**
      * @var ProjectRepository
      */
-    protected $repository;
+    private $repository;
+
+    /**
+     * @var ProjectTaskRepository
+     */
+    private $taskRepository;
+
     /**
      * @var ProjectService
      */
-    protected $service;
-    /**
-     * @var ProjectMembersRepository
-     */
-    private $membersRepository;
+    private $service;
 
-    /**
-     * @param ProjectRepository $repository
-     * @param ProjectService $service
-     * @param ProjectMemberRepository $membersRepository
-     */
-    public function __construct(ProjectRepository $repository, ProjectService $service, ProjectMemberRepository $membersRepository)
+
+    public function __construct(ProjectRepository $repository, ProjectService $service, ProjectTaskRepository $taskRepository)
     {
-        $this->repository        = $repository;
-        $this->service           = $service;
-        $this->membersRepository = $membersRepository;
+        $this->repository = $repository;
+        $this->service = $service;
+        $this->taskRepository = $taskRepository;
     }
+
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return $this->repository->findWhere(['owner_id' => \Authorizer::getResourceOwnerId()]);
-    }
-    /**
-     * @param $id
-     * @return array|mixed
-     */
-    public function show($id)
-    {
-        if (!$this->checkProjectPermissions($id))        {
-            return ['error' => 'Access Forbidden'];
+        public function index()
+        {
+            try
+            {
+                return $this->repository->with(['owner','client'])->findWhere(['owner_id'=> \Authorizer::getResourceOwnerId()]);
+            }
+            catch(NoActiveAccessTokenException $e){
+                return $this->erroMsgm('Usuário não está logado.');
+            }
+            catch(\Exception $e){
+                return $this->erroMsgm('Ocorreu um erro ao listar os projetos. Erro: '.$e->getMessage());
+            }
         }
 
-        $project = $this->repository->with(['owner','client'])->find($id);
-
-        if (empty($project['data'])){
-            return response()->json(['erro' => true, 'message' => 'Acesso proibido']);
-        }
-        return $project;
-
-
-    }
     /**
-     * @param Request $request
-     * @return array
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        return $this->repository->create($request->all());
+        try{
+            return $this->service->create($request->all());
+        }
+        catch(NoActiveAccessTokenException $e){
+            return $this->erroMsgm('Usuário não está logado.');
+        }
+        catch(ValidatorException $e){
+            $error = $e->getMessageBag();
+            return [
+                'error' => true,
+                'message' => "Erro ao cadastrar o projeto, alguns campos são obrigatórios!",
+                'messages' => $error->getMessages(),
+            ];
+        }
+        catch(\Exception $e){
+            return $this->erroMsgm('Ocorreu um erro ao cadastrar o projeto.');
+        }
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        try
+        {
+            if(!$this->service->checkProjectPermissions($id)){
+                return $this->erroMsgm("O usuário não tem acesso a esse projeto");
+            }
+            return $this->repository->with(['owner','client'])->find($id);
+        }
+        catch(ModelNotFoundException $e){
+            return $this->erroMsgm('Projeto não encontrado.');
+        }
+        catch(NoActiveAccessTokenException $e){
+            return $this->erroMsgm('Usuário não está logado.');
+        }
+        catch(\Exception $e){
+            return $this->erroMsgm('Ocorreu um erro ao exibir o projeto.');
+        }
+    }
+
+
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request $request
-     * @param  int     $id
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, $id)
     {
-        if ( ! $this->checkProjectOwner($id))
+        try
         {
-            return ['error' => 'Access Forbidden'];
+            if(!$this->service->checkProjectOwner($id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            return $this->service->update($request->all(), $id);
         }
-        return $this->repository->update($request->all(), $id);
+        catch(ModelNotFoundException $e){
+            return $this->erroMsgm('Projeto não encontrado.');
+        }
+        catch(NoActiveAccessTokenException $e){
+            return $this->erroMsgm('Usuário não está logado.');
+        }
+        catch(ValidatorException $e){
+            $error = $e->getMessageBag();
+            return [
+                'error' => true,
+                'message' => "Erro ao atualizar o projeto, alguns campos são obrigatórios!",
+                'messages' => $error->getMessages(),
+            ];
+        }
+        catch(\Exception $e){
+            return $this->erroMsgm('Ocorreu um erro ao atualizar o projeto.');
+        }
     }
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
-     * @return Response
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        if ( ! $this->checkProjectOwner($id))
+        try
         {
-            return ['error' => 'Access Forbidden'];
+            if(!$this->service->checkProjectOwner($id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            $this->repository->skipPresenter()->find($id)->delete();
         }
-        return ['success' => $this->repository->delete($id)];
+        catch(QueryException $e){
+            return $this->erroMsgm('Projeto não pode ser apagado pois existe um ou mais clientes vinculados a ele.');
+        }
+        catch(ModelNotFoundException $e){
+            return $this->erroMsgm('Projeto não encontrado.');
+        }
+        catch(NoActiveAccessTokenException $e){
+            return $this->erroMsgm('Usuário não está logado.');
+        }
+        catch(\Exception $e){
+            return $this->erroMsgm('Ocorreu um erro ao excluir o projeto.');
+        }
     }
-    /**
-     * @param $id
-     * @return mixed
-     */
+
+
     public function members($id)
     {
-        return $this->repository->find($id)->members;
-    }
-    /**
-     * @param $id
-     * @param $userId
-     * @return array|mixed
-     */
-    public function addMember($id, $userId)
-    {
-        return $this->service->addMember($id, $userId);
-    }
-    /**
-     * @param $id
-     * @param $membersId
-     * @return array
-     */
-    public function removeMember($id, $membersId)
-    {
-        return $this->service->removeMember($membersId);
-    }
-    /**
-     * @param $projectId
-     * @return mixed
-     */
-//    private function checkProjectOwner($projectId)
-//    {
-//        $userId = \Authorizer::getResourceOwnerId();
-//        return (bool)$this->repository->isOwner($projectId, $userId);
-//    }
-//    private function checkProjectMember($projectId)
-//    {
-//        $userId = \Authorizer::getResourceOwnerId();
-//        return (bool)$this->repository->isMember($projectId, $userId);
-//    }
-//
-//    private function checkProjectPermissions($projectId)
-//    {
-//        if($this->checkProjectOwner($projectId) or $this->checkProjectMember($projectId)){
-//            return true;
-//        }
-//        return false;
-//    }
-//
+        try {
 
-    private function checkProjectOwner($projectId)
-    {
-        $userId = \Authorizer::getResourceOwnerId();
+            if(!$this->service->checkProjectOwner($id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
 
-        return $this->repository->isOwner($projectId,$userId);
-    }
+            $members = $this->repository->find($id)->members()->get();
 
-    private function checkProjectMember($projectId)
-    {
-        $userId = \Authorizer::getResourceOwnerId();
+            if (count($members)) {
+                return $members;
+            }
+            return $this->erroMsgm('Esse projeto ainda não tem membros.');
 
-        return $this->repository->hasMember($projectId,$userId);
-    }
-
-    private function checkProjectPermissions($projectId)
-    {
-        if($this->checkProjectOwner($projectId) || $this->checkProjectMember($projectId)){
-            return true;
+        } catch (ModelNotFoundException $e) {
+            return $this->erroMsgm('Projeto não encontrado.');
+        } catch (QueryException $e) {
+            return $this->erroMsgm('Cliente não encontrado.');
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao exibir os membros do projeto.');
         }
 
-        return false;
+    }
+
+    public function addMember($project_id, $member_id)
+    {
+        try {
+            if(!$this->service->checkProjectOwner($project_id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            return $this->service->addMember($project_id, $member_id);
+        } catch (ModelNotFoundException $e) {
+            return $this->erroMsgm('Projeto não encontrado.');
+        } catch (QueryException $e) {
+            return $this->erroMsgm('Cliente não encontrado.');
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao inserir o membro.');
+        }
+    }
+
+    public function removeMember($project_id, $member_id)
+    {
+        try {
+            if(!$this->service->checkProjectOwner($project_id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            return $this->service->removeMember($project_id, $member_id);
+        } catch (ModelNotFoundException $e) {
+            return $this->erroMsgm('Projeto não encontrado.');
+        } catch (QueryException $e) {
+            return $this->erroMsgm('Cliente não encontrado.');
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao remover o membro.');
+        }
+    }
+
+    public function tasks($id)
+    {
+        try {
+
+            if(!$this->service->checkProjectOwner($id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            $tasks = $this->taskRepository->find(['project_id' => $id]);
+
+            if (count($tasks)) {
+                return $tasks;
+            }
+            return $this->erroMsgm('Esse projeto ainda não tem tarefas.');
+
+        } catch (ModelNotFoundException $e) {
+            return $this->erroMsgm('Projeto não encontrado.');
+        } catch (QueryException $e) {
+            return $this->erroMsgm('Tarefa não encontrada.');
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao exibir as tarefas do projeto.');
+        }
+    }
+
+    public function addTask(Request $request)
+    {
+        try {
+            return $this->taskRepository->create($request->all());
+        } catch (ValidatorException $e) {
+            $error = $e->getMessageBag();
+            return [
+                'error' => true,
+                'message' => "Erro ao cadastrar a tarefa, alguns campos são obrigatórios!",
+                'messages' => $error->getMessages(),
+            ];
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao cadastrar a tarefa.');
+        }
+    }
+
+    public function removeTask($project_id, $task_id)
+    {
+        try {
+
+            if(!$this->service->checkProjectOwner($project_id)){
+                return $this->erroMsgm("O usuário não é owner desse projeto");
+            }
+            $this->taskRepository->find($task_id)->delete();
+            return ['success'=>true, 'message'=>'Tarefa deletada com sucesso!'];
+        } catch (QueryException $e) {
+            return $this->erroMsgm('Tarefa não pode ser apagado pois existe um projeto vinculado a ela.');
+        } catch (ModelNotFoundException $e) {
+            return $this->erroMsgm('Tarefa não encontrada.');
+        } catch (\Exception $e) {
+            return $this->erroMsgm('Ocorreu um erro ao excluir a tarefa.');
+        }
+    }
+
+    private function erroMsgm($mensagem)
+    {
+        return [
+            'error' => true,
+            'message' => $mensagem,
+        ];
     }
 }

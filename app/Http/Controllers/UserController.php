@@ -2,7 +2,7 @@
 
 namespace CodeProject\Http\Controllers;
 
-use CodeProject\Repositories\UserRepository;
+use CodeProject\Entities\User;
 use Illuminate\Http\Request;
 
 use CodeProject\Http\Requests;
@@ -12,26 +12,20 @@ use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 class UserController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var User
      */
-    private $userRepository;
+    private $user;
 
-    /**
-     * UserController constructor.
-     * @param UserRepository $userRepository
-     */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(User $user)
     {
-
-        $this->userRepository = $userRepository;
+        $this->user = $user;
     }
 
     public function authenticated()
     {
         $idUser = Authorizer::getResourceOwnerId();
-        return $this->userRepository->find($idUser);
+        return $this->user->find($idUser);
     }
-
     /**
      * Display a listing of the resource.
      *

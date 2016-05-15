@@ -3,12 +3,11 @@
 namespace CodeProject\Repositories;
 
 use CodeProject\Entities\ProjectFile;
-use CodeProject\Presenters\ProjectFilePresenter;
-use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
- * Class ProjectNoteRepositoryEloquent
+ * Class ProjectTaskRepositoryEloquent
  * @package namespace CodeProject\Repositories;
  */
 class ProjectFileRepositoryEloquent extends BaseRepository implements ProjectFileRepository
@@ -22,6 +21,7 @@ class ProjectFileRepositoryEloquent extends BaseRepository implements ProjectFil
     {
         return ProjectFile::class;
     }
+
     /**
      * Boot up the repository, pushing criteria
      */
@@ -29,8 +29,10 @@ class ProjectFileRepositoryEloquent extends BaseRepository implements ProjectFil
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    public function presenter()
+
+
+    public function validator()
     {
-        return ProjectFilePresenter::class;
+        return \CodeProject\Validators\ProjectTaskValidator::class;
     }
 }

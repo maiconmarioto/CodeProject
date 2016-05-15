@@ -6,7 +6,7 @@ use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Interface ProjectNoteRepository
- * @package namespace App\Repositories;
+ * @package namespace CodeProject\Repositories;
  */
 interface ProjectNoteRepository extends RepositoryInterface
 {

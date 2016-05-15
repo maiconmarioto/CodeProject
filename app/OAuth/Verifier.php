@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maicon
- * Date: 14/02/16
- * Time: 15:25
- */
 
 namespace CodeProject\OAuth;
 
