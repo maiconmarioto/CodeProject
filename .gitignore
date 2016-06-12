@@ -11,3 +11,4 @@ resources/bower_components/
 Homestead.yaml
 Homestead.json
 
+/nbproject/private/

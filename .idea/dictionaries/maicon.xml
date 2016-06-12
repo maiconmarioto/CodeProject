@@ -2,16 +2,29 @@
   <dictionary name="maicon">
     <words>
       <w>aceitável</w>
+      <w>acesso</w>
+      <w>arquivo</w>
+      <w>arquivos</w>
       <w>campo</w>
+      <w>carregando</w>
+      <w>concluído</w>
+      <w>datepicker</w>
       <w>editar</w>
+      <w>esse</w>
       <w>excluir</w>
+      <w>iniciado</w>
       <w>inválido</w>
+      <w>listagem</w>
+      <w>maicon</w>
       <w>máximo</w>
       <w>mínimo</w>
       <w>obrigatório</w>
+      <w>projeto</w>
       <w>salvar</w>
       <w>selecione</w>
+      <w>tpls</w>
       <w>typeahead</w>
+      <w>usuário</w>
     </words>
   </dictionary>
 </component>

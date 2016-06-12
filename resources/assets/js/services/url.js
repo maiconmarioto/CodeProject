@@ -10,5 +10,5 @@ angular.module('app.services')
                 return url.replace(new RegExp('{{','g'), ':')
                     .replace(new RegExp('}}','g'),'');
             }
-        }
+        };
     }]);

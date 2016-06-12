@@ -36,7 +36,7 @@ class ProjectFileService
             $this->fileValidator->with($data)->passesOrFail();
             $project = $this->projectRepository->skipPresenter()->find($data['project_id']);
             $projectFile = $project->files()->create($data);
-            $this->storage->put($projectFile->id.".".$data['extension'], $this->fileSystem->get($data['file']));
+            $this->storage->put($projectFile->getFileName(), $this->fileSystem->get($data['file']));
 
             return ['error'=>false, 'message'=>'Arquivo inserido com sucesso!'];
         }
@@ -81,12 +81,17 @@ class ProjectFileService
         return $this->getBaseURL($projectFile);
     }
 
+    public function getFileName($id){
+        $projectFile = $this->repository->skipPresenter()->find($id);
+        return $projectFile->getFileName();
+    }
+
     public function getBaseURL($projectFile)
     {
         switch ($this->storage->getDefaultDriver()){
             case 'local':
                 return $this->storage->getDriver()->getAdapter()->getPathPrefix()
-                .'/'.$projectFile->id.'.'.$projectFile->extension;
+                .'/'. $projectFile->getFileName();
         }
     }
 

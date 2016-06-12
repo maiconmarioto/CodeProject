@@ -2,461 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="203dd8d2-f3ad-4aee-a7e2-d55c5de161e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.phpintel/e3296aac6e1c361223f6c16aca5b7f6d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/db.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/db.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/db.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/event.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/event.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/event.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/func.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/func.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/func.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/general_log.CSM" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/general_log.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/help_topic.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/help_topic.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/help_topic.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/host.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/host.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/host.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/plugin.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/plugin.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/plugin.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/proc.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/proc.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/proc.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/procs_priv.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/procs_priv.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/procs_priv.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/servers.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/servers.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/servers.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/slow_log.CSM" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/slow_log.CSV" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/slow_log.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/time_zone.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/time_zone.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/time_zone.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/user.MYD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/user.MYI" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/mysql/user.frm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/images/icons/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/images/icons/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/database.sqlite" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Entities/Project (cópia).php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectOldController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Serializers/DataArraySerializer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/ProjectNoteService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/ProjectService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Services/ProjectTaskService.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Validators/ProjectTaskValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Validators/ProjectValidator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_04_203819_create_clients_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_05_202954_create_project_tables.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_05_221720_create_table_project_notes_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_16_052105_create_table_project_members.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_16_063246_create_table_project_files.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_16_074156_add_project_id_in_project_files.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_21_201326_create_table_project_tasks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_05_10_050541_create_projectfiles_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-file/projectFileEdit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-file/projectFileList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-file/projectFileNew.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-file/projectFileRemove.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectEdit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectNew.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectRemove.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/controllers/project/projectShow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/filters/date-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/services/project.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/services/projectFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/services/url.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/services/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-cookies.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-messages.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-oauth2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-resource.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/navbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/ng-file-upload.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/query-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/js/vendor/ui-bootstrap-tpls.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/remove.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/build/views/project/show.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileEdit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileRemove.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/services/url.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/new.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/remove.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/show.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/form.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Service/ProjectFileService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Service/ProjectMemberService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Service/ProjectNoteService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Service/ProjectService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Service/ProjectTaskService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Validator/ProjectFileValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Validator/ProjectMemberValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Validator/ProjectTaskValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Validator/ProjectValidator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/34263270816a.err" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/aria_log.00000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/aria_log_control" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/ib_logfile0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/ib_logfile1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/ibdata1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/readme (Conflitos entre maiúsculas e minúsculas).md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Service/ClientService.php" afterPath="$PROJECT_DIR$/app/Services/ClientService.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Validator/ClientValidator.php" afterPath="$PROJECT_DIR$/app/Validators/ClientValidator.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Validator/ProjectNoteValidator.php" afterPath="$PROJECT_DIR$/app/Validators/ProjectNoteValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpintel/a083a3b14ba11ab3acf6098733c888f2" afterPath="$PROJECT_DIR$/.phpintel/a083a3b14ba11ab3acf6098733c888f2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpintel/index" afterPath="$PROJECT_DIR$/.phpintel/index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Listeners/.gitkeep" afterPath="$PROJECT_DIR$/app/Listeners/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Policies/.gitkeep" afterPath="$PROJECT_DIR$/app/Policies/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/.gitkeep" afterPath="$PROJECT_DIR$/database/migrations/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/cond_instances.frm" afterPath="$PROJECT_DIR$/database/performance_schema/cond_instances.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_current.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_current.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_history.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_history.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_history_long.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_history_long.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_by_instance.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_by_instance.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_by_thread_by_event_name.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_by_thread_by_event_name.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_global_by_event_name.frm" afterPath="$PROJECT_DIR$/database/performance_schema/events_waits_summary_global_by_event_name.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/file_instances.frm" afterPath="$PROJECT_DIR$/database/performance_schema/file_instances.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/file_summary_by_event_name.frm" afterPath="$PROJECT_DIR$/database/performance_schema/file_summary_by_event_name.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/file_summary_by_instance.frm" afterPath="$PROJECT_DIR$/database/performance_schema/file_summary_by_instance.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/mutex_instances.frm" afterPath="$PROJECT_DIR$/database/performance_schema/mutex_instances.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/performance_timers.frm" afterPath="$PROJECT_DIR$/database/performance_schema/performance_timers.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/rwlock_instances.frm" afterPath="$PROJECT_DIR$/database/performance_schema/rwlock_instances.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/setup_consumers.frm" afterPath="$PROJECT_DIR$/database/performance_schema/setup_consumers.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/setup_instruments.frm" afterPath="$PROJECT_DIR$/database/performance_schema/setup_instruments.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/setup_timers.frm" afterPath="$PROJECT_DIR$/database/performance_schema/setup_timers.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/threads.frm" afterPath="$PROJECT_DIR$/database/performance_schema/threads.frm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/.gitkeep" afterPath="$PROJECT_DIR$/database/seeds/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/build/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/flaticon.eot" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/flaticon.ttf" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/flaticon.woff" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/avatar.png" afterPath="$PROJECT_DIR$/public/build/images/avatar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-ai.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-ai.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-css.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-css.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-doc.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-doc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-eps.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-eps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-flash.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-flash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-html.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-html.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-jpg.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-jpg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-mp3.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-mp3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-mp4.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-mp4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-pdf.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-pdf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-php.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-php.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-png.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-png.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-txt.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-txt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/icons/ico-xml.png" afterPath="$PROJECT_DIR$/public/build/images/icons/ico-xml.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/images/logo.png" afterPath="$PROJECT_DIR$/public/build/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="$PROJECT_DIR$/public/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/resources/assets/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/flaticon.eot" afterPath="$PROJECT_DIR$/resources/assets/fonts/flaticon.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/flaticon.ttf" afterPath="$PROJECT_DIR$/resources/assets/fonts/flaticon.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/flaticon.woff" afterPath="$PROJECT_DIR$/resources/assets/fonts/flaticon.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/avatar.png" afterPath="$PROJECT_DIR$/resources/assets/images/avatar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-ai.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-ai.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-css.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-css.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-doc.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-doc.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-eps.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-eps.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-flash.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-flash.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-html.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-html.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-jpg.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-jpg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-mp3.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-mp3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-mp4.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-mp4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-pdf.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-pdf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-php.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-php.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-png.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-png.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-txt.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-txt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/icons/ico-xml.png" afterPath="$PROJECT_DIR$/resources/assets/images/icons/ico-xml.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/images/logo.png" afterPath="$PROJECT_DIR$/resources/assets/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/vendor/.gitkeep" afterPath="$PROJECT_DIR$/resources/views/vendor/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env.example" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CodeProject.iml" afterPath="$PROJECT_DIR$/.idea/CodeProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/blade.xml" afterPath="$PROJECT_DIR$/.idea/blade.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/composerJson.xml" afterPath="$PROJECT_DIR$/.idea/composerJson.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cssxfire.xml" afterPath="$PROJECT_DIR$/.idea/cssxfire.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/maicon.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/maicon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/CodeProject_node_modules.xml" afterPath="$PROJECT_DIR$/.idea/libraries/CodeProject_node_modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpstorm.meta.php" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" afterPath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/Client.php" afterPath="$PROJECT_DIR$/app/Entities/Client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/OAuthClient.php" afterPath="$PROJECT_DIR$/app/Entities/OAuthClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/Project.php" afterPath="$PROJECT_DIR$/app/Entities/Project.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/ProjectFile.php" afterPath="$PROJECT_DIR$/app/Entities/ProjectFile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/ProjectMember.php" afterPath="$PROJECT_DIR$/app/Entities/ProjectMember.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/ProjectNote.php" afterPath="$PROJECT_DIR$/app/Entities/ProjectNote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/ProjectTask.php" afterPath="$PROJECT_DIR$/app/Entities/ProjectTask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entities/User.php" afterPath="$PROJECT_DIR$/app/Entities/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Events/Event.php" afterPath="$PROJECT_DIR$/app/Events/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectMemberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectMemberController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectNoteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTaskController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTaskController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckProjectOwner.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckProjectOwner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/Request.php" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/app/Jobs/Job.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/OAuth/Verifier.php" afterPath="$PROJECT_DIR$/app/OAuth/Verifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ClientPresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ClientPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ProjectMemberPresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ProjectMemberPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ProjectNotePresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ProjectNotePresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ProjectPresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ProjectPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Presenters/ProjectTaskPresenter.php" afterPath="$PROJECT_DIR$/app/Presenters/ProjectTaskPresenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php" afterPath="$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ClientRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ClientRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ClientRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectFileRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectFileRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectFileRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectFileRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectMemberRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectMemberRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectMemberRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectMemberRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectNoteRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectNoteRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectTaskRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectTaskRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProjectTaskRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProjectTaskRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectMemberTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectMemberTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectNoteTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectNoteTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectTaskTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectTaskTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProjectTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProjectTransformer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artisan" afterPath="$PROJECT_DIR$/artisan" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/autoload.php" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/broadcasting.php" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/cache.php" afterPath="$PROJECT_DIR$/config/cache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/compile.php" afterPath="$PROJECT_DIR$/config/compile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/mail.php" afterPath="$PROJECT_DIR$/config/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/oauth2.php" afterPath="$PROJECT_DIR$/config/oauth2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/queue.php" afterPath="$PROJECT_DIR$/config/queue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/repository.php" afterPath="$PROJECT_DIR$/config/repository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/session.php" afterPath="$PROJECT_DIR$/config/session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/view.php" afterPath="$PROJECT_DIR$/config/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/.gitignore" afterPath="$PROJECT_DIR$/database/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/homestead/db.opt" afterPath="$PROJECT_DIR$/database/homestead/db.opt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110151_create_oauth_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110151_create_oauth_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110304_create_oauth_grants_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110304_create_oauth_grants_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110403_create_oauth_grant_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110403_create_oauth_grant_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110459_create_oauth_clients_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110459_create_oauth_clients_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110557_create_oauth_client_endpoints_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110557_create_oauth_client_endpoints_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110705_create_oauth_client_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110705_create_oauth_client_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_110817_create_oauth_client_grants_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_110817_create_oauth_client_grants_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111002_create_oauth_sessions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111002_create_oauth_sessions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111109_create_oauth_session_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111109_create_oauth_session_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111254_create_oauth_auth_codes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111254_create_oauth_auth_codes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111403_create_oauth_auth_code_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111403_create_oauth_auth_code_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111518_create_oauth_access_tokens_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111518_create_oauth_access_tokens_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111657_create_oauth_access_token_scopes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111657_create_oauth_access_token_scopes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_04_24_111810_create_oauth_refresh_tokens_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_04_24_111810_create_oauth_refresh_tokens_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_01_30_113023_create_clients_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_30_113023_create_clients_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_07_222558_create_projects_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_07_222558_create_projects_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_08_134750_create_project_notes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_08_134750_create_project_notes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_14_212922_create_table_project_members.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_14_212922_create_table_project_members.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_233832_create_project_tasks_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_18_233832_create_project_tasks_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_21_224935_create_table_project_files.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_21_224935_create_table_project_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_25_185111_add_project_id_in_project_files.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_25_185111_add_project_id_in_project_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/performance_schema/db.opt" afterPath="$PROJECT_DIR$/database/performance_schema/db.opt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ClientTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ClientTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/OAuthClientSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/OAuthClientSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ProjectNoteTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ProjectNoteTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ProjectTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ProjectTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/ProjectTaskTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/ProjectTaskTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker-compose.yml" afterPath="$PROJECT_DIR$/docker-compose.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpspec.yml" afterPath="$PROJECT_DIR$/phpspec.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/app.css" afterPath="$PROJECT_DIR$/public/build/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/components.css" afterPath="$PROJECT_DIR$/public/build/css/components.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/flaticon.css" afterPath="$PROJECT_DIR$/public/build/css/flaticon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/font-awesome.css" afterPath="$PROJECT_DIR$/public/build/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/vendor/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/build/css/vendor/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/css/vendor/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/build/css/vendor/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/flaticon.svg" afterPath="$PROJECT_DIR$/public/build/fonts/flaticon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/build/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/build/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/ProjectFileService.php" afterPath="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/app.js" afterPath="$PROJECT_DIR$/public/build/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/client/clientEdit.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/client/clientEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/client/clientList.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/client/clientList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/client/clientNew.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/client/clientNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/client/clientRemove.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/client/clientRemove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/home.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/login.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteEdit.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteList.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteNew.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteRemove.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteRemove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteShow.js" afterPath="$PROJECT_DIR$/public/build/js/controllers/project-note/projectNoteShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/services/client.js" afterPath="$PROJECT_DIR$/public/build/js/services/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/js/services/projectNote.js" afterPath="$PROJECT_DIR$/public/build/js/services/projectNote.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/edit.html" afterPath="$PROJECT_DIR$/public/build/views/client/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/list.html" afterPath="$PROJECT_DIR$/public/build/views/client/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/new.html" afterPath="$PROJECT_DIR$/public/build/views/client/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/client/remove.html" afterPath="$PROJECT_DIR$/public/build/views/client/remove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/home.html" afterPath="$PROJECT_DIR$/public/build/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/login.html" afterPath="$PROJECT_DIR$/public/build/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project-note/edit.html" afterPath="$PROJECT_DIR$/public/build/views/project-note/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project-note/list.html" afterPath="$PROJECT_DIR$/public/build/views/project-note/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project-note/new.html" afterPath="$PROJECT_DIR$/public/build/views/project-note/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project-note/remove.html" afterPath="$PROJECT_DIR$/public/build/views/project-note/remove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/build/views/project-note/show.html" afterPath="$PROJECT_DIR$/public/build/views/project-note/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/all.css" afterPath="$PROJECT_DIR$/public/css/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js" afterPath="$PROJECT_DIR$/public/js/all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/all.js.map" afterPath="$PROJECT_DIR$/public/js/all.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/app.css" afterPath="$PROJECT_DIR$/resources/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/app.css.map" afterPath="$PROJECT_DIR$/resources/assets/css/app.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/components.css" afterPath="$PROJECT_DIR$/resources/assets/css/components.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/components.css.map" afterPath="$PROJECT_DIR$/resources/assets/css/components.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/flaticon.css" afterPath="$PROJECT_DIR$/resources/assets/css/flaticon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/css/font-awesome.css" afterPath="$PROJECT_DIR$/resources/assets/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/flaticon.svg" afterPath="$PROJECT_DIR$/resources/assets/fonts/flaticon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/resources/assets/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/resources/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/app.js" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientList.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/client/clientRemove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/home.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/login.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteEdit.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteRemove.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteRemove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteShow.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectList.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectRemove.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectRemove.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectShow.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project/projectShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/filters/date-br.js" afterPath="$PROJECT_DIR$/resources/assets/js/filters/date-br.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/client.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/project.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/projectNote.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/user.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/edit.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/client/remove.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/client/remove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/home.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/login.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-note/edit.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-note/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-note/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-note/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-note/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-note/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-note/remove.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-note/remove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-note/show.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-note/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/remove.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/remove.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project/show.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js" afterPath="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/services/url.js" afterPath="$PROJECT_DIR$/resources/assets/js/services/url.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/js/views/project-file/new.html" afterPath="$PROJECT_DIR$/resources/assets/js/views/project-file/new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/503.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/503.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/default" afterPath="$PROJECT_DIR$/sites/default" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/app/.gitignore" afterPath="$PROJECT_DIR$/storage/app/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/ExampleTest.php" afterPath="$PROJECT_DIR$/tests/ExampleTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/TestCase.php" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
     </list>
     <ignored path="laravel_angularjs_codeproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -472,18 +36,86 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="laravel_angularjs_codeproject" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectFileDownload.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectFileDownload.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-file/list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectFileList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectFile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectFile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -493,9 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/assets/js/services/user.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/home.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/login.js" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectList.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/filters/date-br.js" />
@@ -517,40 +146,44 @@
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectEdit.js" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectNoteNew.js" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectFileRepository.php" />
         <option value="$PROJECT_DIR$/app/Transformers/ProjectFileTransformer.php" />
         <option value="$PROJECT_DIR$/app/Presenters/ProjectFilePresenter.php" />
         <option value="$PROJECT_DIR$/app/Services/ProjectService.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" />
-        <option value="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
         <option value="$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/services/url.js" />
         <option value="$PROJECT_DIR$/app/Providers/CodeProjectRepositoryProvider.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ProjectFileRepositoryEloquent.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/project-file/new.html" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
-        <option value="$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/list.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project/projectNew.js" />
         <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/new.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/views/project/edit.html" />
-        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileEdit.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js" />
-        <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js" />
         <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileRemove.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/project-file/new.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js" />
+        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html" />
+        <option value="$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" />
         <option value="$PROJECT_DIR$/resources/assets/js/services/projectFile.js" />
+        <option value="$PROJECT_DIR$/app/Entities/ProjectFile.php" />
+        <option value="$PROJECT_DIR$/app/Services/ProjectFileService.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
     <servers />
@@ -559,8 +192,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1366" />
     <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="width" value="1853" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -693,6 +326,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_angularjs_codeproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Codeproject" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="project-file" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -719,7 +382,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="directives" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -738,105 +401,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_angularjs_codeproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Codeproject" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project-file" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_angularjs_codeproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Codeproject" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_angularjs_codeproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Codeproject" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SearchEverywhereHistoryKey" value="projectfileser&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Services/ProjectFileService.php&#10;projectfile.php&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Entities/ProjectFile.php&#10;projectfilecontroller&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Http/Controllers/ProjectFileController.php&#10;app.b&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/resources/views/app.blade.php&#10;app.j&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/resources/assets/js/app.js&#10;app.&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/resources/assets/js/app.js&#10;app.bl&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/resources/views/app.blade.php&#10;projectnotenew&#9;null&#9;null&#10;projectfilenew&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/resources/assets/js/controllers/project-file/projectFileNew.js&#10;projectfilevalid&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Validators/ProjectFileValidator.php&#10;projectfileservice&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Services/ProjectFileService.php&#10;projectcontroll&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Http/Controllers/ProjectController.php&#10;routes&#9;FILE&#9;file:///home/maicon/Dropbox/Sites/Curso/Codeproject/app/Http/routes.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\resources\views" />
-      <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/assets/js/views" />
       <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\resources\assets\js\services" />
       <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\app\Services" />
       <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\app\Presenters" />
       <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\app\Transformers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\resources\views" />
+      <recent name="C:\Users\Nilton\PhpstormProjects\laravel_angularjs_codeproject\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -984,7 +578,11 @@
       <workItem from="1462939301423" duration="789000" />
       <workItem from="1462988474419" duration="1855000" />
       <workItem from="1463022651775" duration="5066000" />
-      <workItem from="1463325080942" duration="6756000" />
+      <workItem from="1463325080942" duration="7970000" />
+      <workItem from="1463835999602" duration="120000" />
+      <workItem from="1465521834413" duration="1037000" />
+      <workItem from="1465699042558" duration="4200000" />
+      <workItem from="1465735415632" duration="6209000" />
     </task>
     <task id="LOCAL-00001" summary="primeiro commit - instalação do laravel">
       <created>1451938507240</created>
@@ -1277,51 +875,56 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48464000" />
+    <option name="totallyTimeSpent" value="61244000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <frame x="1366" y="27" width="1853" height="1028" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26595744" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2650334" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19092418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498615" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2662116" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27231467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26595744" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4144427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1374,48 +977,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-note/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-note/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presenters/ProjectNotePresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="62" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/ProjectNoteRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Transformers/ProjectNoteTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1500,13 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1518,20 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="17" column="42" selection-start-line="15" selection-start-column="16" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1556,31 +1096,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Validators/ProjectFileValidator.php" />
     <entry file="file://$PROJECT_DIR$/app/Services/ProjectService.php" />
-    <entry file="file://$PROJECT_DIR$/app/Services/ProjectFileService.php" />
     <entry file="file://$PROJECT_DIR$/../laravel_commerce/resources/views/products/create_image.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-file/list.html" />
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project/list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="25" column="83" selection-start-line="25" selection-start-column="83" selection-end-line="25" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1588,7 +1109,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,7 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1604,7 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1612,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,7 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,7 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="60" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1636,15 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="766">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="82" column="61" selection-start-line="82" selection-start-column="61" selection-end-line="82" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,15 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1684,38 +1179,163 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectFile.js">
+    <entry file="file://$PROJECT_DIR$/app/Validators/ProjectFileValidator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="293" column="5" selection-start-line="293" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteNew.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="20">
+          <caret line="1" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/url.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <marker date="1465734948928" expanded="true" signature="107:513" placeholder="{...}" />
+            <marker date="1465734948928" expanded="true" signature="163:327" placeholder="{...}" />
+            <marker date="1465734948928" expanded="true" signature="370:502" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/app/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-note/projectNoteList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectNote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+        <state relative-caret-position="180">
+          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileNew.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-file/new.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="26" column="93" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="73" selection-start-line="2" selection-start-column="73" selection-end-line="2" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/project-file/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/controllers/project-file/projectFileList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/ProjectFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/ProjectFileService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="85" column="42" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/services/projectFile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/views/templates/projectFileDownload.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/directives/projectFileDownload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
       </provider>

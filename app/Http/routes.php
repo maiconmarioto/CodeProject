@@ -11,22 +11,10 @@ Route::post('oauth/access_token', function(){
     return Response::json(Authorizer::issueAccessToken());
 });
 
-
 Route::group(['middleware'=>'oauth'], function(){
 
     Route::resource('client', 'ClientController', ['except'=>['create','edit']]);
-
-    Route::group(['middleware'=>'CheckProjectOwner'], function(){
-        Route::resource('project', 'ProjectController', ['except'=>['create','edit']]);
-
-        Route::get('project/{id}/member', 'ProjectController@members');
-        Route::post('project/{id}/member/{member_id}', 'ProjectController@addMember');
-        Route::delete('project/{id}/member/{member_id}', 'ProjectController@removeMember');
-
-        Route::get('project/{id}/task', 'ProjectController@tasks');
-        Route::post('project/{id}/task', 'ProjectController@addTask');
-        Route::delete('project/{id}/task/{task_id}', 'ProjectController@removeTask');
-    });
+    Route::resource('project', 'ProjectController', ['except'=>['create','edit']]);
 
     Route::group(['prefix'=>'project'], function(){
         Route::get('{id}/note', 'ProjectNoteController@index');

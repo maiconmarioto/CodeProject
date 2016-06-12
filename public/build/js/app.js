@@ -1,10 +1,11 @@
 var app = angular.module('app', [
-    'ngRoute', 'angular-oauth2', 'app.controllers', 'app.services' , 'app.filters','ui.bootstrap.typeahead',
-    'ui.bootstrap.datepicker', 'ui.bootstrap.tpls','ngFileUpload'
+    'ngRoute', 'angular-oauth2', 'app.controllers', 'app.services', 'app.filters', 'app.directives',
+    'ui.bootstrap.typeahead', 'ui.bootstrap.datepicker', 'ui.bootstrap.tpls', 'ngFileUpload'
 ]);
 
 angular.module('app.controllers', ['ngMessages', 'angular-oauth2']);
 angular.module('app.filters', []);
+angular.module('app.directives', []);
 angular.module('app.services', ['ngResource']);
 
 app.provider('appConfig', ['$httpParamSerializerProvider', function ($httpParamSerializerProvider) {
@@ -17,6 +18,9 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function ($httpParamS
                 {value: 3, label: 'Concluído'}
             ]
         },
+        urls: {
+            projectFile: '/project/{{id}}/file/{{idFile}}'
+        },
         utils: {
             transformRequest: function (data) {
                 if (angular.isObject(data)) {
@@ -24,12 +28,12 @@ app.provider('appConfig', ['$httpParamSerializerProvider', function ($httpParamS
                 }
                 return data;
             },
-            
-            transformResponse: function(data, headers){
+
+            transformResponse: function (data, headers) {
                 var headersGetter = headers();
-                if (headersGetter['content-type'] == 'application/json' || headersGetter['content-type']=='text/json'){
+                if (headersGetter['content-type'] == 'application/json' || headersGetter['content-type'] == 'text/json') {
                     var dataJson = JSON.parse(data);
-                    if(dataJson.hasOwnProperty('data') && Object.keys(dataJson).length == 1){
+                    if (dataJson.hasOwnProperty('data') && Object.keys(dataJson).length == 1) {
                         dataJson = dataJson.data;
                     }
                     return dataJson;
@@ -109,7 +113,7 @@ app.config([
 
 
             // Project File
-            .when('/project/:id/file', {
+            .when('/project/:id/files', {
                 templateUrl: 'build/views/project-file/list.html',
                 controller: 'ProjectFileListController'
             })
@@ -160,8 +164,8 @@ app.config([
         });
     }]);
 
-app.run(['$rootScope', '$window', 'OAuth', function($rootScope, $window, OAuth) {
-    $rootScope.$on('oauth:error', function(event, rejection) {
+app.run(['$rootScope', '$window', 'OAuth', function ($rootScope, $window, OAuth) {
+    $rootScope.$on('oauth:error', function (event, rejection) {
         // Ignore `invalid_grant` error - should be catched on `LoginController`.
         if ('invalid_grant' === rejection.data.error) {
             return;
